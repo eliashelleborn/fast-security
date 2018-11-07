@@ -4,7 +4,7 @@
   "description": "Assignment. Make a landing page for a new product – FastSecurity, FS1.0",
   "main": ".",
   "scripts": {
-    "build": "gulp"
+    "build": "gulp sass"
   },
   "repository": {
     "type": "git",
