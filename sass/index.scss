@@ -5,3 +5,18 @@
 *:after {
   box-sizing: border-box;
 }
+
+body {
+  font-family: sans-serif;
+}
+
+.container {
+  max-width: 1190px;
+  margin: 0 auto;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
