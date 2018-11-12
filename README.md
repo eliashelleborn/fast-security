@@ -1,5 +1,7 @@
 # FastSecurity
 
+LIVE: https://fast-security.netlify.com/
+
 Assignment. Make a landing page for a new product – FastSecurity, FS1.0
 
 Start: 5 nov kl 9–12 Visual Arena <br/>
