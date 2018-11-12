@@ -2,6 +2,7 @@
 import gulp, { series, parallel } from "gulp";
 import sass from "gulp-sass";
 import connect from "gulp-connect";
+import sourcemaps from "gulp-sourcemaps";
 
 // Move html to dist
 // TODO: minify --- https://github.com/jonschlinkert/gulp-htmlmin
@@ -16,7 +17,9 @@ export const html = () => {
 export const styles = () => {
   return gulp
     .src("./src/sass/**/*.scss")
-    .pipe(sass().on("error", sass.logError))
+    .pipe(sourcemaps.init())
+    .pipe(sass({ outputStyle: "compressed" }).on("error", sass.logError))
+    .pipe(sourcemaps.write("./"))
     .pipe(gulp.dest("./dist"))
     .pipe(connect.reload());
 };
