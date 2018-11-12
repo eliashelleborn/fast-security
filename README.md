@@ -8,6 +8,7 @@ Start: 5 nov kl 9–12 Visual Arena <br/>
 Presentation: 30 Nov kl 9–15 Visual Arena
 
 ### Group 11:
+
 - Benjamin Fransson (WU)
 - Camille Jadermark (DD)
 - Elias Johansson (WU)
@@ -15,3 +16,18 @@ Presentation: 30 Nov kl 9–15 Visual Arena
 - Näslund, Henrik (CG)
 - Wejedal, Johan (CG)
 
+### Installation / Usage:
+
+Install:
+
+```
+  $ git clone https://github.com/eliasjohansson/fast-security.git
+  $ cd fast-security
+  $ npm install
+```
+
+Development: <br>
+`$ npm run dev`
+
+Build: <br>
+`$ npm run build`
