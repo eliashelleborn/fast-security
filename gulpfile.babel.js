@@ -3,13 +3,14 @@ import gulp, { series, parallel } from "gulp";
 import sass from "gulp-sass";
 import connect from "gulp-connect";
 import sourcemaps from "gulp-sourcemaps";
+import webpack from "webpack-stream";
 
 // Move html to dist
 // TODO: minify --- https://github.com/jonschlinkert/gulp-htmlmin
 export const html = () => {
   return gulp
-    .src("./src/*.html")
-    .pipe(gulp.dest("./dist"))
+    .src("./src/index.html")
+    .pipe(gulp.dest("dist/"))
     .pipe(connect.reload());
 };
 
@@ -24,22 +25,40 @@ export const styles = () => {
     .pipe(connect.reload());
 };
 
+// Create JS bundle
+export const js = () => {
+  return gulp
+    .src("src/js/index.js")
+    .pipe(
+      webpack({
+        mode: "development",
+        devtool: "source-map",
+        output: { filename: "bundle.js" }
+      })
+    )
+    .pipe(gulp.dest("dist/"))
+    .pipe(connect.reload());
+};
+
 // Watch for changes
-export const watch = () => {
+export const watch = done => {
   gulp.watch("./src/sass/**/*.scss", styles);
-  gulp.watch("./src/*.html", html);
+  gulp.watch("./src/index.html", html);
+  gulp.watch("./src/js/**/*.js", js);
+  done();
 };
 
 // Start development server
-export const server = () => {
-  return connect.server({
+export const server = done => {
+  connect.server({
     root: "dist",
     port: 8080,
     livereload: true
   });
+  done();
 };
 
-export const build = series(html, styles);
+export const build = series(styles, js, html);
 export const dev = series(build, parallel(watch, server));
 
 export default build;
