@@ -16,10 +16,7 @@ Presentation: 30 Nov kl 9–15 Visual Arena
 - Näslund, Henrik (CG)
 - Wejedal, Johan (CG)
 
-### Installation / Usage:
-
-Install:
-
+### Installation:
 ```
   $ git clone https://github.com/eliasjohansson/fast-security.git
   $ cd fast-security
