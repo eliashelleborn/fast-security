@@ -40,6 +40,11 @@ export const js = () => {
     .pipe(connect.reload());
 };
 
+// Copy assets to dist
+export const assets = () => {
+  return gulp.src("./src/assets/**/*").pipe(gulp.dest("./dist/assets"));
+};
+
 // Watch for changes
 export const watch = done => {
   gulp.watch("./src/sass/**/*.scss", styles);
@@ -58,7 +63,7 @@ export const server = done => {
   done();
 };
 
-export const build = series(styles, js, html);
+export const build = series(assets, styles, js, html);
 export const dev = series(build, parallel(watch, server));
 
 export default build;
