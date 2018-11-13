@@ -12,6 +12,7 @@ body {
 
 .container {
   max-width: 1190px;
+  height: 100%;
   margin: 0 auto;
 }
 
@@ -19,4 +20,5 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 100%;
 }
