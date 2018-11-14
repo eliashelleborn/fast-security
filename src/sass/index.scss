@@ -1,0 +1,71 @@
+@import "vendor/normalize.scss";
+@import "fonts";
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "AktivGrotesk", sans-serif;
+}
+
+.middle {
+  position: fixed;
+  top: 50%;
+  height: 1px;
+  width: 100%;
+  background: red;
+  z-index: 9;
+}
+
+.section-nav {
+  height: 290px;
+  align-items: center;
+  position: fixed;
+  color: white;
+  z-index: 10;
+  left: 11px;
+  top: 50%;
+  margin-top: -140px;
+  transition: transform 0.7s ease;
+  transform: translateY(102px);
+
+  ul {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    li {
+      font-size: 16px;
+      font-weight: 400;
+      transition: all 0.7s ease;
+      &.active {
+        margin-left: -1px;
+        font-size: 74px;
+        font-weight: bold;
+      }
+    }
+  }
+}
+
+.container {
+  // max-width: 1190px;
+  height: 100%;
+  margin: 0 auto;
+  padding: 0 10px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
