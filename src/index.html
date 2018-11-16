@@ -6,13 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Fast Security</title>
     <link rel="stylesheet" href="index.css" />
-	<script src="js/lang.js"></script>
 	<script>
   
 		// Initialize language js.
 		let lang = _GET['user_lang'];
 		let content = load_lang(lang, lang_object);
   
+
+    //! Experienced some problems with storing references
+    // Fullpage navigation
+    function openFullNav() {
+      document.querySelector(".full-nav").style.height = "100%";
+    }
+
+    function closeFullNav() {
+      document.querySelector(".full-nav").style.height = "0%";
+    }
 	</script>
   </head>
 
@@ -26,12 +35,25 @@
         </div>
       </div>
 
-      <div class="menu-btn">
+      <div class="menu-btn" onclick="openFullNav()">
           <div></div>
           <div></div>
           <div></div> 
       </div>
     </header>
+
+    <nav class="full-nav">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeFullNav()">&times;</a>
+      <div class="overlay-content">
+          <ul>
+            <li class="active">1.0 - Some text</li>
+            <li>2.0 - Some text</li>
+            <li>3.0 - Some text</li>
+            <li>4.0 - Some text</li>
+            <li>5.0 - Some text</li>
+          </ul>
+      </div>
+    </nav>
 
     <nav class="section-nav">
       <ul>
