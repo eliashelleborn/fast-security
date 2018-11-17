@@ -3,6 +3,7 @@ import test from "./test";
 
 test();
 
+// Section navigation
 const setSectionNav = (origin, dest) => {
   const nav = document.querySelector(".section-nav");
 
@@ -20,6 +21,7 @@ const setSectionNav = (origin, dest) => {
   navItems[dest].classList.add("active");
 };
 
+// Initialize fullpagejs
 new fullpage("#fullpage", {
   //options here
   licenseKey: "OPEN-SOURCE-GPLV3-LICENSE",
