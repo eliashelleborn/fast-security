@@ -18,10 +18,10 @@
     function toggleFullNav() {
       if (document.querySelector(".full-nav").style.height == "100%") {
         document.querySelector(".full-nav").style.height = "0%"; // For header background, change to 48px
-        document.querySelector(".menu-btn").classList.remove("change");
+        document.querySelector(".menu-btn").classList.remove("active");
       } else {
         document.querySelector(".full-nav").style.height = "100%";
-        document.querySelector(".menu-btn").classList.add("change");
+        document.querySelector(".menu-btn").classList.add("active");
       }
     }
   </script>
