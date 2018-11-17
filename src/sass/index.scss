@@ -142,6 +142,11 @@ header {
       display: block;
       transition: 0.3s;
       cursor: pointer;
+
+      a{
+        color: inherit;
+        text-decoration: none;
+      }
       
       span{
         vertical-align: text-top;
