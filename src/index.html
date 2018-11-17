@@ -19,9 +19,11 @@
       if (document.querySelector(".full-nav").style.height == "100%") {
         document.querySelector(".full-nav").style.height = "0%"; // For header background, change to 48px
         document.querySelector(".menu-btn").classList.remove("active");
+        document.querySelector("main").classList.remove("blur");
       } else {
         document.querySelector(".full-nav").style.height = "100%";
         document.querySelector(".menu-btn").classList.add("active");
+        document.querySelector("main").classList.add("blur");
       }
     }
   </script>
