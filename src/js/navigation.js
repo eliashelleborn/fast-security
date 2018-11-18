@@ -19,7 +19,7 @@ export const toggleFullpageNav = () => {
   if (fullNav.style.height == "100%") {
     fullNav.style.height = "0%"; // For header background, change to 48px
     menuBtn.classList.remove("active");
-    main.querySelector("main").classList.remove("blur");
+    main.classList.remove("blur");
   } else {
     fullNav.style.height = "100%";
     menuBtn.classList.add("active");
