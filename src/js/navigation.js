@@ -28,7 +28,7 @@ export const toggleFullpageNav = () => {
 };
 
 // Fixed section navigation/indicator
-export const setSectionNav = (origin, dest) => {
+export const setActiveSection = (origin, dest) => {
   const nav = document.querySelector(".section-nav");
 
   const positions = {
@@ -44,4 +44,11 @@ export const setSectionNav = (origin, dest) => {
   const navItems = nav.querySelector("ul").children;
   navItems[origin].classList.remove("active");
   navItems[dest].classList.add("active");
+};
+
+export const setActiveSlide = slide => {
+  const slideIndicator = document.querySelector(
+    ".section-nav li.active > span"
+  );
+  slideIndicator.innerText = slide;
 };

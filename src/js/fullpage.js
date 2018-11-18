@@ -1,5 +1,5 @@
 import fullpage from "fullpage.js";
-import { setSectionNav } from "./navigation";
+import { setActiveSection, setActiveSlide } from "./navigation";
 
 const fullpageInstance = new fullpage("#fullpage", {
   licenseKey: "OPEN-SOURCE-GPLV3-LICENSE",
@@ -7,7 +7,10 @@ const fullpageInstance = new fullpage("#fullpage", {
   controlArrows: false,
 
   onLeave: (origin, destination, direction) => {
-    setSectionNav(origin.index, destination.index);
+    setActiveSection(origin.index, destination.index);
+  },
+  onSlideLeave: function(section, origin, destination, direction) {
+    setActiveSlide(destination.index);
   }
 });
 
