@@ -116,14 +116,14 @@ header {
   }
 }
 
-.blur {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  z-index: 999;
-  filter: blur(4px);
-  -webkit-filter: blur(4px);
-}
+// main{
+//   transition: filter 0s .4s;
+// }
+
+// main.blur{
+//   filter: blur(8px);
+//   transition: filter 0s .2s;
+// }
 
 .full-nav {
   height: 0%;
@@ -133,6 +133,7 @@ header {
   top: 0;
   left: 0;
   background-color: rgba(255, 255, 255, 0.4);
+  backdrop-filter: blur(5px);
   overflow-y: hidden;
   transition: 0.5s;
 
@@ -217,8 +218,9 @@ header {
   left: 11px;
   top: 50%;
   margin-top: -140px;
-  transition: transform 0.7s ease;
+  transition: transform 0.7s ease, opacity 0.2s ease;
   transform: translateY(102px);
+  opacity: 1;
 
   ul {
     height: 100%;
