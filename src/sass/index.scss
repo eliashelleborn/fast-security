@@ -11,6 +11,177 @@ body {
   font-family: "AktivGrotesk", sans-serif;
 }
 
+header {
+  display: flex;
+  position: absolute;
+  z-index: 1001;
+
+  width: 100%;
+  height: 48px;
+
+  //background-color: rgba(238, 238, 238, 0.2);
+  color: #eee;
+
+  justify-content: flex-end;
+  align-content: center;
+
+  .lang {
+    position: relative;
+    display: inline-block;
+    margin-right: 12px;
+
+    span{
+      display: block;
+      padding: calc((48px - 18.04px) / 2);
+    }
+  }
+
+  .lang:hover span{
+    background-color: rgba(238, 238, 238, 0.2);
+  }
+
+  .lang:hover .lang-content {
+    display: block;
+  }
+
+  .lang-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(238, 238, 238, 0.2);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+
+    a{
+      color: #eee;
+      text-decoration: none;
+      border: 1px solid transparent;
+
+      display: block;
+      padding: 12.5px;
+    }
+
+    a:hover{
+      background-color: #222;
+      border: 1px solid #eee;
+    }
+  }
+
+  .menu-btn{
+    display: inline-block;
+    cursor: pointer;
+    height: 35px;
+    padding: calc((48px - 35px) / 2);
+    padding-right: 24px;
+
+      .bar1, .bar2, .bar3 {
+        width: 35px;
+        height: 5px;
+        background-color: #eee;
+        margin: 6px 0;
+        transition: all 0.5s ease;
+      }
+    }
+
+  .menu-btn.active{
+
+    .bar1 {
+      -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+      transform: rotate(-45deg) translate(-9px, 6px);
+    }
+    
+    .bar2 {opacity: 0;}
+
+    .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -8px);
+    }
+  }
+}
+
+// Backdrop-filter doesn't seem to be working,
+// I tried making a work-around.
+// Remove the two following main blocks and
+// everything will work as normal again. 
+// main{
+//   transition: filter 0s .4s;
+// }
+
+// main.blur{
+//   filter: blur(8px);
+//   transition: filter 0s .2s;
+// }
+
+.full-nav {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: rgba(255,255,255, 0.4);
+  backdrop-filter: blur(5px);
+  overflow-y: hidden;
+  transition: 0.5s;
+  
+  .closebtn {
+    text-decoration: none;
+    color: #818181;
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+  
+  ul{
+    padding: 0;
+
+    li {
+      padding: 8px;
+      font-size: 36px;
+      color: #eee;
+      display: block;
+      transition: 0.3s;
+      cursor: pointer;
+
+      a{
+        color: inherit;
+        text-decoration: none;
+      }
+      
+      span{
+        vertical-align: text-top;
+        font-size: 12px;
+      }
+    }
+  
+    li:hover, a:focus {
+      color: #333;
+    }
+  }
+
+  @media screen and (max-height: 450px) {
+    overflow-y: auto;
+
+    li {font-size: 20px}
+
+    .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+}
+
+.overlay-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+
+
 .middle {
   position: fixed;
   top: 50%;
@@ -40,10 +211,12 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
     li {
       font-size: 16px;
       font-weight: 400;
       transition: all 0.7s ease;
+
       &.active {
         margin-left: -1px;
         font-size: 74px;
