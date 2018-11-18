@@ -12,14 +12,18 @@ export const init = () => {
 //! Experienced some problems with storing references
 // Fullpage navigation
 export const toggleFullpageNav = () => {
-  if (document.querySelector(".full-nav").style.height == "100%") {
-    document.querySelector(".full-nav").style.height = "0%"; // For header background, change to 48px
-    document.querySelector(".menu-btn").classList.remove("active");
-    document.querySelector("main").classList.remove("blur");
+  const fullNav = document.querySelector(".full-nav");
+  const menuBtn = document.querySelector(".menu-btn");
+  const main = document.querySelector("main");
+
+  if (fullNav.style.height == "100%") {
+    fullNav.style.height = "0%"; // For header background, change to 48px
+    menuBtn.classList.remove("active");
+    main.querySelector("main").classList.remove("blur");
   } else {
-    document.querySelector(".full-nav").style.height = "100%";
-    document.querySelector(".menu-btn").classList.add("active");
-    document.querySelector("main").classList.add("blur");
+    fullNav.style.height = "100%";
+    menuBtn.classList.add("active");
+    main.classList.add("blur");
   }
 };
 
