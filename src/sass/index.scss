@@ -116,18 +116,14 @@ header {
   }
 }
 
-// Backdrop-filter doesn't seem to be working,
-// I tried making a work-around.
-// Remove the two following main blocks and
-// everything will work as normal again.
-// main{
-//   transition: filter 0s .4s;
-// }
-
-// main.blur{
-//   filter: blur(8px);
-//   transition: filter 0s .2s;
-// }
+.blur {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 999;
+  filter: blur(4px);
+  -webkit-filter: blur(4px);
+}
 
 .full-nav {
   height: 0%;
@@ -137,7 +133,6 @@ header {
   top: 0;
   left: 0;
   background-color: rgba(255, 255, 255, 0.4);
-  backdrop-filter: blur(5px);
   overflow-y: hidden;
   transition: 0.5s;
 
@@ -170,6 +165,7 @@ header {
       span {
         vertical-align: text-top;
         font-size: 12px;
+        font-weight: 500;
       }
     }
 
