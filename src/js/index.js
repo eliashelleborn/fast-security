@@ -1,13 +1,8 @@
 import fullpage from "./fullpage";
+import { init as initNavigation } from "./navigation";
 
-const init = () => {};
+const init = () => {
+  initNavigation();
+};
 
-/* const currLang = "sv";
-const langNodes = document.querySelectorAll(".sv, .en");
-langNodes.forEach(langNode => {
-  if (langNode.classList.contains(currLang)) {
-    langNode.classList.add("visible");
-  } else {
-    langNode.classList.remove("visible");
-  }
-}); */
+init();

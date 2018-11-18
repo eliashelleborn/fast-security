@@ -6,29 +6,6 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Fast Security</title>
         <link rel="stylesheet" href="index.css" />
-        <script>
-            // Initialize language js.
-            let lang = _GET["user_lang"];
-            let content = load_lang(lang, lang_object);
-
-            //! Experienced some problems with storing references
-            // Fullpage navigation
-            function toggleFullNav() {
-                if (
-                    document.querySelector(".full-nav").style.height == "100%"
-                ) {
-                    document.querySelector(".full-nav").style.height = "0%"; // For header background, change to 48px
-                    document
-                        .querySelector(".menu-btn")
-                        .classList.remove("active");
-                    document.querySelector("main").classList.remove("blur");
-                } else {
-                    document.querySelector(".full-nav").style.height = "100%";
-                    document.querySelector(".menu-btn").classList.add("active");
-                    document.querySelector("main").classList.add("blur");
-                }
-            }
-        </script>
     </head>
 
     <body>
@@ -41,7 +18,7 @@
                 </div>
             </div>
 
-            <div class="menu-btn" onclick="toggleFullNav()">
+            <div class="menu-btn">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
@@ -51,25 +28,20 @@
         <nav class="full-nav">
             <div class="overlay-content">
                 <ul>
-                    <li class="active">
-                        <span>1.0</span>
-                        <a href="#1" onclick="toggleFullNav()">HOME</a>
+                    <li class="menu-item active">
+                        <a href="#1"><span>1.0</span> HOME</a>
                     </li>
-                    <li>
-                        <span>2.0</span>
-                        <a href="#2" onclick="toggleFullNav()">HISTORY</a>
+                    <li lass="menu-item">
+                        <a href="#2"><span>2.0</span> HISTORY</a>
                     </li>
-                    <li>
-                        <span>3.0</span>
-                        <a href="#3" onclick="toggleFullNav()">PRODUCT</a>
+                    <li lass="menu-item">
+                        <a href="#3"><span>3.0</span> PRODUCT</a>
                     </li>
-                    <li>
-                        <span>4.0</span>
-                        <a href="#4" onclick="toggleFullNav()">SHOP</a>
+                    <li lass="menu-item">
+                        <a href="#4"><span>4.0</span> SHOP</a>
                     </li>
-                    <li>
-                        <span>5.0</span>
-                        <a href="#5" onclick="toggleFullNav()">SIGN</a>
+                    <li lass="menu-item">
+                        <a href="#5"><span>5.0</span> SIGN</a>
                     </li>
                 </ul>
             </div>
@@ -133,8 +105,6 @@
             </div>
         </main>
 
-        <!-- inject:js -->
         <script src="bundle.js"></script>
-        <!-- endinject -->
     </body>
 </html>

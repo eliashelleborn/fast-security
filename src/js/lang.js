@@ -1,3 +1,13 @@
+/* const currLang = "sv";
+const langNodes = document.querySelectorAll(".sv, .en");
+langNodes.forEach(langNode => {
+  if (langNode.classList.contains(currLang)) {
+    langNode.classList.add("visible");
+  } else {
+    langNode.classList.remove("visible");
+  }
+}); */
+
 // Loads content from specified language from lang_object
 function load_language(lang, lang_object) {
   switch (lang) {
