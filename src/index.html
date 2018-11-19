@@ -11,11 +11,15 @@
     <body>
         <header>
             <div class="lang">
-                <span>ENG</span>
-                <div class="lang-content">
-                    <a href="?lang=sv">SWE</a>
-                    <!-- <a href="?lang=en">ENG</a> -->
-                </div>
+                <!--
+                    <span>ENG</span>
+                    <div class="lang-content">
+                        <a href="?lang=sv">SWE</a>
+                        <a href="?lang=en">ENG</a>
+                    </div>
+                -->
+                <button class="lang-btn" data-lang="en">Eng</button>
+                <button class="lang-btn" data-lang="sv">Swe</button>
             </div>
 
             <div class="menu-btn">
@@ -48,7 +52,7 @@
             </div>
         </nav>
 
-        <main>
+        <main data-currentLang="en">
             <nav class="section-nav">
                 <ul>
                     <li class="active">1.<span>0</span></li>
@@ -66,11 +70,8 @@
                             class="container"
                             style="background-image: url('https://images.unsplash.com/photo-1528420228020-89e7d15fc099?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b460186c08d4fbc389f1cf5924573a8f&auto=format&fit=crop&w=2089&q=80');"
                         >
-                            <div class="content">
-                                <!--
-                                    <h2 class="en current-lang">English Title</h2>
-                                    <h2 class="sv">Svensk titel</h2>
-                                -->
+                            <div class="content s1-s0">
+                                <h2 class="title">English title</h2>
                             </div>
                         </div>
                     </div>

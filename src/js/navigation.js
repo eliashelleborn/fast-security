@@ -1,15 +1,23 @@
+import { setLang, updateContent } from "./lang";
+
 export const init = () => {
   const menuBtn = document.querySelector(".menu-btn");
   const menuItems = document.querySelectorAll(".menu-item > a");
+  const langBtns = document.querySelectorAll(".lang-btn");
 
   // Event listeners
   menuBtn.addEventListener("click", () => toggleFullpageNav());
   menuItems.forEach(item => {
     item.addEventListener("click", () => toggleFullpageNav());
   });
+  langBtns.forEach(item => {
+    item.addEventListener("click", e => {
+      setLang(e.target.dataset.lang);
+      updateContent();
+    });
+  });
 };
 
-//! Experienced some problems with storing references
 // Fullpage navigation
 export const toggleFullpageNav = () => {
   const fullNav = document.querySelector(".full-nav");

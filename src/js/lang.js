@@ -1,59 +1,60 @@
-/* const currLang = "sv";
-const langNodes = document.querySelectorAll(".sv, .en");
-langNodes.forEach(langNode => {
-  if (langNode.classList.contains(currLang)) {
-    langNode.classList.add("visible");
-  } else {
-    langNode.classList.remove("visible");
+export const init = () => {
+  document.addEventListener("DOMContentLoaded", () => {
+    updateContent();
+  });
+};
+
+export const setLang = lang => {
+  const ls = window.localStorage;
+  ls.setItem("lang", lang);
+};
+
+export const getLang = () => {
+  const ls = window.localStorage;
+  const lang = ls.getItem("lang");
+  return lang || "en";
+};
+
+export const updateContent = () => {
+  const lang = getLang();
+
+  const main = document.querySelector("main");
+
+  // Update content if current content doesnt match selected language
+  if (main.getAttribute("data-currentLang") !== lang) {
+    const currentLangContent = content[lang];
+
+    main.setAttribute("data-currentLang", lang);
+
+    // For each section/slide
+    for (const sectionKey in currentLangContent) {
+      if (currentLangContent.hasOwnProperty(sectionKey)) {
+        const section = currentLangContent[sectionKey];
+
+        // For each content in current section/slide
+        for (const key in section) {
+          if (section.hasOwnProperty(key)) {
+            const value = section[key];
+            const el = document.querySelector(`.${sectionKey} .${key}`);
+            if (value !== el.innerHTML) {
+              el.innerHTML = value;
+            }
+          }
+        }
+      }
+    }
   }
-}); */
+};
 
-// Loads content from specified language from lang_object
-function load_language(lang, lang_object) {
-  switch (lang) {
-    // Load swedish language file
-    case "swedish":
-      return lang_object.swedish;
-      break;
-
-    // Load english language file
-    case "english":
-    default:
-      return lang_object.english;
-      break;
-  }
-}
-
-// Retrieve get variables
-var $_GET = {};
-if (document.location.toString().indexOf("?") !== -1) {
-  var query = document.location
-    .toString()
-    // get the query string
-    .replace(/^.*?\?/, "")
-    // and remove any existing hash string (thanks, @vrijdenker)
-    .replace(/#.*$/, "")
-    .split("&");
-
-  for (var i = 0, l = query.length; i < l; i++) {
-    var aux = decodeURIComponent(query[i]).split("=");
-    $_GET[aux[0]] = aux[1];
-  }
-}
-
-// Language object
-lang_object = {
-  swedish: {
-    login: "Logga in",
-    register: "Registrera",
-    "content-1-title": "Detta är första titeln",
-    "content-1-text": "Detta är det första innehållet du kommer se"
+const content = {
+  en: {
+    "s1-s0": {
+      title: "English title"
+    }
   },
-
-  english: {
-    login: "Login",
-    register: "Register",
-    "content-1-title": "This is the first title",
-    "content-1-text": "This is the first content you will see"
+  sv: {
+    "s1-s0": {
+      title: "Svensk titel"
+    }
   }
 };
