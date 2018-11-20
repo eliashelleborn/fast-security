@@ -20,6 +20,15 @@ export const updateContent = () => {
 
   const main = document.querySelector("main");
 
+  const langOptions = document.querySelectorAll(".lang option");
+  langOptions.forEach(opt => {
+    if (opt.value === lang) {
+      opt.selected = true;
+    } else {
+      opt.selected = false;
+    }
+  });
+
   // Update content if current content doesnt match selected language
   if (main.getAttribute("data-currentLang") !== lang) {
     const currentLangContent = content[lang];

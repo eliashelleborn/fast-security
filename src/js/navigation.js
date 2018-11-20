@@ -3,18 +3,16 @@ import { setLang, updateContent } from "./lang";
 export const init = () => {
   const menuBtn = document.querySelector(".menu-btn");
   const menuItems = document.querySelectorAll(".menu-item > a");
-  const langBtns = document.querySelectorAll(".lang-btn");
+  const langSelect = document.querySelector(".lang select");
 
   // Event listeners
   menuBtn.addEventListener("click", () => toggleFullpageNav());
   menuItems.forEach(item => {
     item.addEventListener("click", () => toggleFullpageNav());
   });
-  langBtns.forEach(item => {
-    item.addEventListener("click", e => {
-      setLang(e.target.dataset.lang);
-      updateContent();
-    });
+  langSelect.addEventListener("change", e => {
+    setLang(e.target.value);
+    updateContent();
   });
 };
 
