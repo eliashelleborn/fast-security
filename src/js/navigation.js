@@ -24,7 +24,7 @@ export const toggleFullpageNav = () => {
   const sectionNav = document.querySelector(".section-nav");
 
   if (fullNav.style.height == "100%") {
-    fullNav.style.height = "0%"; // For header background, change to 48px
+    fullNav.style.height = "48px"; // For header background, change to 48px
     menuBtn.classList.remove("active");
     main.classList.remove("blur");
     sectionNav.style.opacity = "1";
