@@ -27,7 +27,7 @@ header {
 
   .lang {
     margin-right: 10px;
-    padding: 20px 15px 10px 15px;
+    padding: 17px 15px 10px 18px;
     select {
       border: none;
       background: none;
@@ -154,14 +154,17 @@ header {
 
   ul {
     padding: 0;
+    transition: transform .5s;
+
+    transform: translate(0px, -200px);
 
     li {
       padding: 10px;
-      font-size: 48px;
+      font-size: 6px;
       font-weight: bold;
-      color: #eee;
+      color: transparent;
       display: block;
-      transition: 0.3s;
+      transition: 0.5s;
       cursor: pointer;
 
       a {
@@ -196,9 +199,19 @@ header {
     }
   }
 }
+
 .full-nav.open{
   height: 100%;
 
+  ul{
+    // Translate into initial position
+    transform: translate(0px, 0px);
+
+    li{
+      font-size: 48px;
+      color: #eee;
+    }
+  }
   
 }
 
