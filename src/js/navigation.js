@@ -23,15 +23,17 @@ export const toggleFullpageNav = () => {
   const main = document.querySelector("main");
   const sectionNav = document.querySelector(".section-nav");
 
-  if (fullNav.style.height == "100%") {
-    fullNav.style.height = "48px"; // For header background, change to 48px
+  if (fullNav.classList.contains('open')) {
+    fullNav.classList.remove('open');
+
     menuBtn.classList.remove("active");
-    main.classList.remove("blur");
+    // main.classList.remove("blur");
     sectionNav.style.opacity = "1";
   } else {
-    fullNav.style.height = "100%";
+    fullNav.classList.add('open');
+
     menuBtn.classList.add("active");
-    main.classList.add("blur");
+    // main.classList.add("blur");
     sectionNav.style.opacity = "0";
   }
 };
