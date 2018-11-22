@@ -179,9 +179,12 @@ header {
       }
     }
 
-    li:hover,
-    a:focus {
-      color: #333;
+    li:hover a{
+      color: rgb(100, 100, 100);
+    }
+
+    li a:focus{
+      color: #00205A;
     }
   }
 
