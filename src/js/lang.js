@@ -62,7 +62,8 @@ const content = {
     },
     "s5-s0": {
       title: "Join the future",
-      underTitle: "Get the broshure"
+      underTitle: "Get the broshure",
+      joinBtn: "Join"
     }
   },
   sv: {
@@ -71,7 +72,8 @@ const content = {
     },
     "s5-s0": {
       title: "Gå med i framtiden",
-      underTitle: "Få tag i broschyren"
+      underTitle: "Få tag i broschyren",
+      joinBtn: "Gå med"
     }
   }
 };
