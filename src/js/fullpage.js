@@ -5,12 +5,56 @@ const fullpageInstance = new fullpage("#fullpage", {
   licenseKey: "OPEN-SOURCE-GPLV3-LICENSE",
   autoScrolling: true,
   controlArrows: false,
+  normalScrollElements: ".the-legend-content",
+  scrollOverflow: true,
 
   onLeave: (origin, destination, direction) => {
     setActiveSection(origin.index, destination.index);
   },
   onSlideLeave: function(section, origin, destination, direction) {
     setActiveSlide(destination.index);
+  },
+  afterSlideLoad: function(section, origin, destination, direction) {
+    const theLegendContent = document.querySelector(".the-legend-content");
+    const sectionNav = document.querySelector(".section-nav");
+    if (section.index === 1 && destination.index >= 1) {
+      theLegendContent.classList.add("open");
+      sectionNav.style.opacity = "0";
+      this.setAllowScrolling(false);
+    } else {
+      theLegendContent.classList.remove("open");
+      sectionNav.style.opacity = "1";
+      this.setAllowScrolling(true);
+    }
+  }
+});
+
+const theLegendBtn = document.querySelector(".the-legend-btn");
+theLegendBtn.addEventListener("click", () => {
+  fullpageInstance.moveTo(2, 1);
+});
+
+const theLegendContent = document.querySelector(".the-legend-content");
+theLegendContent.addEventListener("scroll", ev => {
+  const [section1, section2, section3] = theLegendContent.querySelectorAll(
+    "div"
+  );
+  const scrollPos = ev.target.scrollTop;
+  const currentSlide = fullpageInstance.getActiveSlide();
+  if (
+    scrollPos > section1.offsetTop &&
+    scrollPos < section2.offsetTop &&
+    currentSlide.index !== 1
+  ) {
+    fullpageInstance.moveTo(2, 1);
+  } else if (
+    scrollPos > section2.offsetTop &&
+    scrollPos < section3.offsetTop &&
+    currentSlide.index !== 2
+  ) {
+    fullpageInstance.moveTo(2, 2);
+  } else if (scrollPos > section3.offsetTop && currentSlide.index !== 3) {
+    fullpageInstance.moveTo(2, 3);
   }
 });
 
