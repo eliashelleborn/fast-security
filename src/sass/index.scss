@@ -26,9 +26,9 @@ header {
   align-items: center;
 
   .lang {
-    margin-right: 10px;
-    padding: 17px 15px 10px 18px;
     select {
+      margin-right: 10px;
+      padding: 17px 15px 10px 18px;
       border: none;
       background: none;
       -webkit-appearance: none;
@@ -179,9 +179,12 @@ header {
       }
     }
 
-    li:hover,
-    a:focus {
-      color: #333;
+    li:hover a{
+      color: rgb(100, 100, 100);
+    }
+
+    li a:focus{
+      color: #00205A;
     }
   }
 
@@ -294,3 +297,9 @@ header {
     display: block;
   }
 }
+
+@import "sections/1";
+@import "sections/2";
+@import "sections/3";
+@import "sections/4";
+@import "sections/5";
