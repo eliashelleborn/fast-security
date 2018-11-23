@@ -240,7 +240,6 @@ header {
   height: 290px;
   align-items: center;
   position: fixed;
-  color: white;
   z-index: 10;
   left: 11px;
   top: 50%;
@@ -253,6 +252,7 @@ header {
     height: 100%;
     padding: 0;
     margin: 0;
+    color: white;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -263,10 +263,30 @@ header {
       font-weight: 400;
       transition: all 0.7s ease;
 
+      @media screen and (max-width: 600px) {
+        & {
+          margin-left: -4px;
+          font-size: 14px;
+        }
+      }
+
+      a{
+        color: white;
+        text-decoration: none;
+      }
+
       &.active {
         margin-left: -1px;
         font-size: 74px;
         font-weight: bold;
+      }
+
+      @media screen and (max-width: 600px) {
+        &.active {
+          margin-left: -4px;
+          font-size: 20px;
+          font-weight: bold;
+        }
       }
     }
   }
