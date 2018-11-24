@@ -65,7 +65,7 @@ export const setActiveSection = (origin, dest) => {
 
 export const setActiveSlide = slide => {
   const slideIndicator = document.querySelector(
-    ".section-nav a li.active > span"
+    ".section-nav li.active a > span"
   );
   slideIndicator.innerText = slide;
 };
