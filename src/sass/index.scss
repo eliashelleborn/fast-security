@@ -247,10 +247,15 @@ header {
   z-index: 10;
   left: 11px;
   top: 50%;
-  margin-top: -140px;
+  margin-top: -141px;
   transition: transform 0.7s ease, opacity 0.2s ease;
-  transform: translateY(102px);
+  transform: translateY(112px);
   opacity: 1;
+
+  @media screen and (min-width: 600px) {
+    margin-top: -139px;
+    transform: translateY(103px);
+  }
 
   ul {
     height: 100%;

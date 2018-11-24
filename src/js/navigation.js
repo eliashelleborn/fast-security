@@ -20,7 +20,7 @@ export const init = () => {
 
 export const scrollTop = () => {
   fullpage_api.moveTo(1);
-}
+};
 
 // Fullpage navigation
 export const toggleFullpageNav = () => {
@@ -29,14 +29,14 @@ export const toggleFullpageNav = () => {
   const main = document.querySelector("main");
   const sectionNav = document.querySelector(".section-nav");
 
-  if (fullNav.classList.contains('open')) {
-    fullNav.classList.remove('open');
+  if (fullNav.classList.contains("open")) {
+    fullNav.classList.remove("open");
 
     menuBtn.classList.remove("active");
     // main.classList.remove("blur");
     sectionNav.style.opacity = "1";
   } else {
-    fullNav.classList.add('open');
+    fullNav.classList.add("open");
 
     menuBtn.classList.add("active");
     // main.classList.add("blur");
@@ -49,14 +49,23 @@ export const setActiveSection = (origin, dest) => {
   const nav = document.querySelector(".section-nav");
 
   const positions = {
-    1: "102px",
-    2: "50px",
-    3: "0px",
-    4: "-50px",
-    5: "-102px"
+    mobile: {
+      1: "112px",
+      2: "55px",
+      3: "0px",
+      4: "-55px",
+      5: "-112px"
+    },
+    desktop: {
+      1: "103px",
+      2: "50px",
+      3: "0px",
+      4: "-50px",
+      5: "-103px"
+    }
   };
 
-  nav.style.transform = `translateY(${positions[dest + 1]})`;
+  nav.style.transform = `translateY(${positions.desktop[dest + 1]})`;
 
   const navItems = nav.querySelector("ul").children;
   navItems[origin].classList.remove("active");
