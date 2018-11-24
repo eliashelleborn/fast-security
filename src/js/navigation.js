@@ -28,7 +28,6 @@ export const toggleFullpageNav = () => {
   const fullNav = document.querySelector(".full-nav");
   const menuBtn = document.querySelector(".menu-btn");
   const main = document.querySelector("main");
-  const sectionNav = document.querySelector(".section-nav");
 
   if (fullNav.classList.contains("open")) {
     fullNav.classList.remove("open");
@@ -37,14 +36,14 @@ export const toggleFullpageNav = () => {
     // main.classList.remove("blur");
     const currentSlide = fullpage.getActiveSlide();
     if (currentSlide.index === 0) {
-      sectionNav.style.opacity = "1";
+      showSectionNav();
     }
   } else {
     fullNav.classList.add("open");
 
     menuBtn.classList.add("active");
     // main.classList.add("blur");
-    sectionNav.style.opacity = "0";
+    hideSectionNav();
   }
 };
 
@@ -74,6 +73,16 @@ export const setActiveSection = (origin, dest) => {
   const navItems = nav.querySelector("ul").children;
   navItems[origin].classList.remove("active");
   navItems[dest].classList.add("active");
+};
+
+export const hideSectionNav = () => {
+  const sectionNav = document.querySelector(".section-nav");
+  sectionNav.classList.add("hidden");
+};
+
+export const showSectionNav = () => {
+  const sectionNav = document.querySelector(".section-nav");
+  sectionNav.classList.remove("hidden");
 };
 
 export const setActiveSlide = slide => {

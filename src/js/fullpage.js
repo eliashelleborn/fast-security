@@ -1,5 +1,9 @@
 import fullpage from "fullpage.js";
-import { setActiveSection, setActiveSlide } from "./navigation";
+import {
+  setActiveSection,
+  setActiveSlide,
+  toggleSectionNav
+} from "./navigation";
 
 const fullpageInstance = new fullpage("#fullpage", {
   licenseKey: "OPEN-SOURCE-GPLV3-LICENSE",
@@ -17,15 +21,15 @@ const fullpageInstance = new fullpage("#fullpage", {
   afterSlideLoad: function(section, origin, destination, direction) {
     // Section 2 (The Legend) functionality
     const theLegendContent = document.querySelector(".the-legend-content");
-    const sectionNav = document.querySelector(".section-nav");
+
     // Hide sectionNav when opening content scroller and disable scroll navigation
     if (section.index === 1 && destination.index >= 1) {
       theLegendContent.classList.add("open");
-      sectionNav.style.opacity = "0";
+      hideSectionNav();
       toggleScrolling(false);
     } else {
       theLegendContent.classList.remove("open");
-      sectionNav.style.opacity = "1";
+      showSectionNav();
       toggleScrolling(true);
     }
   }
@@ -66,5 +70,8 @@ theLegendContent.addEventListener("scroll", ev => {
     fullpageInstance.moveTo(2, 3);
   }
 });
+
+const dragHandle = theLegendContent.querySelector(".drag-handle");
+dragHandle.addEventListener("click", () => {});
 
 export default fullpageInstance;
