@@ -6,7 +6,6 @@ const fullpageInstance = new fullpage("#fullpage", {
   autoScrolling: true,
   controlArrows: false,
   normalScrollElements: ".the-legend-content",
-  scrollOverflow: true,
   lazyLoading: false, // It looked ugly with the white background until the image loaded when you switched section
 
   onLeave: (origin, destination, direction) => {
@@ -23,14 +22,18 @@ const fullpageInstance = new fullpage("#fullpage", {
     if (section.index === 1 && destination.index >= 1) {
       theLegendContent.classList.add("open");
       sectionNav.style.opacity = "0";
-      this.setAllowScrolling(false);
+      toggleScrolling(false);
     } else {
       theLegendContent.classList.remove("open");
       sectionNav.style.opacity = "1";
-      this.setAllowScrolling(true);
+      toggleScrolling(true);
     }
   }
 });
+
+const toggleScrolling = bool => {
+  fullpageInstance.setAllowScrolling(bool);
+};
 
 // SECTION 2 (The Legend)
 // Go to next slide when pressing "More"
