@@ -2,6 +2,12 @@
 @import "vendor/fullpage";
 @import "fonts";
 
+@import "sections/1";
+@import "sections/2";
+@import "sections/3";
+@import "sections/4";
+@import "sections/5";
+
 *,
 *:before,
 *:after {
@@ -80,7 +86,6 @@ header {
     width: 23px;
     padding: 24px 30px;
 
-
     .bar1,
     .bar2,
     .bar3 {
@@ -154,7 +159,7 @@ header {
 
   ul {
     padding: 0;
-    transition: transform .5s;
+    transition: transform 0.5s;
 
     transform: translate(0px, -200px);
 
@@ -179,12 +184,12 @@ header {
       }
     }
 
-    li:hover a{
+    li:hover a {
       color: rgb(100, 100, 100);
     }
 
-    li a:focus{
-      color: #00205A;
+    li a:focus {
+      color: #00205a;
     }
   }
 
@@ -203,19 +208,18 @@ header {
   }
 }
 
-.full-nav.open{
+.full-nav.open {
   height: 100%;
 
-  ul{
+  ul {
     // Translate into initial position
     transform: translate(0px, 0px);
 
-    li{
+    li {
       font-size: 48px;
       color: #eee;
     }
   }
-  
 }
 
 .overlay-content {
@@ -243,10 +247,19 @@ header {
   z-index: 10;
   left: 11px;
   top: 50%;
-  margin-top: -140px;
+  margin-top: -141px;
   transition: transform 0.7s ease, opacity 0.2s ease;
-  transform: translateY(102px);
+  transform: translateY(112px);
   opacity: 1;
+
+  &.hidden {
+    opacity: 0;
+  }
+
+  @media screen and (min-width: 600px) {
+    margin-top: -139px;
+    transform: translateY(103px);
+  }
 
   ul {
     height: 100%;
@@ -263,14 +276,7 @@ header {
       font-weight: 400;
       transition: all 0.7s ease;
 
-      @media screen and (max-width: 600px) {
-        & {
-          margin-left: -4px;
-          font-size: 14px;
-        }
-      }
-
-      a{
+      a {
         color: white;
         text-decoration: none;
       }
@@ -283,9 +289,7 @@ header {
 
       @media screen and (max-width: 600px) {
         &.active {
-          margin-left: -4px;
-          font-size: 20px;
-          font-weight: bold;
+          font-size: 56px;
         }
       }
     }
@@ -317,9 +321,3 @@ header {
     display: block;
   }
 }
-
-@import "sections/1";
-@import "sections/2";
-@import "sections/3";
-@import "sections/4";
-@import "sections/5";
