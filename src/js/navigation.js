@@ -1,4 +1,5 @@
 import { setLang, updateContent } from "./lang";
+import fullpage from "./fullpage";
 
 export const init = () => {
   const menuBtn = document.querySelector(".menu-btn");
@@ -34,7 +35,10 @@ export const toggleFullpageNav = () => {
 
     menuBtn.classList.remove("active");
     // main.classList.remove("blur");
-    sectionNav.style.opacity = "1";
+    const currentSlide = fullpage.getActiveSlide();
+    if (currentSlide.index === 0) {
+      sectionNav.style.opacity = "1";
+    }
   } else {
     fullNav.classList.add("open");
 
