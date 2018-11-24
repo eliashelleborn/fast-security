@@ -2,6 +2,12 @@
 @import "vendor/fullpage";
 @import "fonts";
 
+@import "sections/1";
+@import "sections/2";
+@import "sections/3";
+@import "sections/4";
+@import "sections/5";
+
 *,
 *:before,
 *:after {
@@ -26,9 +32,9 @@ header {
   align-items: center;
 
   .lang {
-    margin-right: 10px;
-    padding: 17px 15px 10px 18px;
     select {
+      margin-right: 10px;
+      padding: 17px 15px 10px 18px;
       border: none;
       background: none;
       -webkit-appearance: none;
@@ -178,9 +184,12 @@ header {
       }
     }
 
-    li:hover,
-    a:focus {
-      color: #333;
+    li:hover a {
+      color: rgb(100, 100, 100);
+    }
+
+    li a:focus {
+      color: #00205a;
     }
   }
 
@@ -235,7 +244,6 @@ header {
   height: 290px;
   align-items: center;
   position: fixed;
-  color: white;
   z-index: 10;
   left: 11px;
   top: 50%;
@@ -248,6 +256,7 @@ header {
     height: 100%;
     padding: 0;
     margin: 0;
+    color: white;
     list-style: none;
     display: flex;
     flex-direction: column;
@@ -258,10 +267,30 @@ header {
       font-weight: 400;
       transition: all 0.7s ease;
 
+      @media screen and (max-width: 600px) {
+        & {
+          margin-left: -4px;
+          font-size: 14px;
+        }
+      }
+
+      a {
+        color: white;
+        text-decoration: none;
+      }
+
       &.active {
         margin-left: -1px;
         font-size: 74px;
         font-weight: bold;
+      }
+
+      @media screen and (max-width: 600px) {
+        &.active {
+          margin-left: -4px;
+          font-size: 20px;
+          font-weight: bold;
+        }
       }
     }
   }
@@ -290,32 +319,5 @@ header {
   display: none;
   &.current-lang {
     display: block;
-  }
-}
-
-.the-legend-content {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0px;
-  z-index: 1000;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.75);
-  overflow-y: scroll;
-  padding: 0 30px;
-  transition: 0.5s ease;
-
-  div {
-    min-height: 50vh;
-    h1 {
-      font-size: 38px;
-      font-weight: 700;
-      margin-top: 30px;
-    }
-  }
-
-  &.open {
-    height: 50vh;
   }
 }

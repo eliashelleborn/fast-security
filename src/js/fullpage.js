@@ -7,6 +7,7 @@ const fullpageInstance = new fullpage("#fullpage", {
   controlArrows: false,
   normalScrollElements: ".the-legend-content",
   scrollOverflow: true,
+  lazyLoading: false, // It looked ugly with the white background until the image loaded when you switched section
 
   onLeave: (origin, destination, direction) => {
     setActiveSection(origin.index, destination.index);

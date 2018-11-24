@@ -4,8 +4,10 @@ export const init = () => {
   const menuBtn = document.querySelector(".menu-btn");
   const menuItems = document.querySelectorAll(".menu-item > a");
   const langSelect = document.querySelector(".lang select");
+  const scrollTopBtn = document.querySelector(".s5-s0 .scrollTopBtn");
 
   // Event listeners
+  scrollTopBtn.addEventListener("click", () => scrollTop());
   menuBtn.addEventListener("click", () => toggleFullpageNav());
   menuItems.forEach(item => {
     item.addEventListener("click", () => toggleFullpageNav());
@@ -15,6 +17,10 @@ export const init = () => {
     updateContent();
   });
 };
+
+export const scrollTop = () => {
+  fullpage_api.moveTo(1);
+}
 
 // Fullpage navigation
 export const toggleFullpageNav = () => {
@@ -59,7 +65,7 @@ export const setActiveSection = (origin, dest) => {
 
 export const setActiveSlide = slide => {
   const slideIndicator = document.querySelector(
-    ".section-nav li.active > span"
+    ".section-nav li.active a > span"
   );
   slideIndicator.innerText = slide;
 };
