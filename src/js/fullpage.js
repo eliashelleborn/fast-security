@@ -49,17 +49,17 @@ theLegendContent.addEventListener("scroll", ev => {
   // Go to slide that corresponds with current visible paragraph
   if (
     scrollPos > section1.offsetTop &&
-    scrollPos < section2.offsetTop &&
+    scrollPos < section2.offsetTop - 100 &&
     currentSlide.index !== 1
   ) {
     fullpageInstance.moveTo(2, 1);
   } else if (
-    scrollPos > section2.offsetTop &&
-    scrollPos < section3.offsetTop &&
+    scrollPos > section2.offsetTop - 100 &&
+    scrollPos < section3.offsetTop - 100 &&
     currentSlide.index !== 2
   ) {
     fullpageInstance.moveTo(2, 2);
-  } else if (scrollPos > section3.offsetTop && currentSlide.index !== 3) {
+  } else if (scrollPos > section3.offsetTop - 100 && currentSlide.index !== 3) {
     fullpageInstance.moveTo(2, 3);
   }
 });
