@@ -6,6 +6,7 @@ export const init = () => {
   const menuItems = document.querySelectorAll(".menu-item > a");
   const langSelect = document.querySelector(".lang select");
   const scrollTopBtn = document.querySelector(".s5-s0 .scrollTopBtn");
+  const navDashes = document.querySelectorAll(".nav-dash");
 
   // Event listeners
   scrollTopBtn.addEventListener("click", () => scrollTop());
@@ -16,6 +17,23 @@ export const init = () => {
   langSelect.addEventListener("change", e => {
     setLang(e.target.value);
     updateContent();
+  });
+  console.log(navDashes);
+  navDashes.forEach(navDash => {
+    navDash.addEventListener("click", () => {
+      navDash.classList.add("clicked");
+      setTimeout(() => {
+        if (navDash.classList.contains("nav-dash--prev")) {
+          fullpage.moveSectionUp();
+        } else if (navDash.classList.contains("nav-dash--next")) {
+          fullpage.moveSectionDown();
+        }
+      }, 200);
+
+      setTimeout(() => {
+        navDash.classList.remove("clicked");
+      }, 700);
+    });
   });
 };
 
