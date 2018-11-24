@@ -15,8 +15,10 @@ const fullpageInstance = new fullpage("#fullpage", {
     setActiveSlide(destination.index);
   },
   afterSlideLoad: function(section, origin, destination, direction) {
+    // Section 2 (The Legend) functionality
     const theLegendContent = document.querySelector(".the-legend-content");
     const sectionNav = document.querySelector(".section-nav");
+    // Hide sectionNav when opening content scroller and disable scroll navigation
     if (section.index === 1 && destination.index >= 1) {
       theLegendContent.classList.add("open");
       sectionNav.style.opacity = "0";
@@ -29,6 +31,8 @@ const fullpageInstance = new fullpage("#fullpage", {
   }
 });
 
+// SECTION 2 (The Legend)
+// Go to next slide when pressing "More"
 const theLegendBtn = document.querySelector(".the-legend-btn");
 theLegendBtn.addEventListener("click", () => {
   fullpageInstance.moveTo(2, 1);
@@ -41,6 +45,7 @@ theLegendContent.addEventListener("scroll", ev => {
   );
   const scrollPos = ev.target.scrollTop;
   const currentSlide = fullpageInstance.getActiveSlide();
+  // Go to slide that corresponds with current visible paragraph
   if (
     scrollPos > section1.offsetTop &&
     scrollPos < section2.offsetTop &&
