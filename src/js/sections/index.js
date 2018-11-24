@@ -1,7 +1,7 @@
-import initSection2 from "./section-2";
+import initS2 from "./s2";
 
 const initSections = () => {
-  initSection2();
+  initS2();
 };
 
 export default initSections;
