@@ -26,12 +26,28 @@
   padding: 0 30px;
   transition: 0.5s ease;
 
-  div {
+  &-section {
     min-height: 50vh;
     h1 {
       font-size: 38px;
       font-weight: 700;
       margin-top: 30px;
+    }
+  }
+
+  .drag-handle {
+    position: fixed;
+
+    left: 50%;
+    padding: 10px 50px;
+    margin-left: -150px;
+    &:before {
+      content: "";
+      display: block;
+      width: 200px;
+      height: 5px;
+      background-color: #fff;
+      border-radius: 5px;
     }
   }
 
