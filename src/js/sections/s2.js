@@ -13,7 +13,7 @@ const init = () => {
   const theLegendContent = document.querySelector(".the-legend-content");
   theLegendContent.addEventListener("scroll", ev => {
     const [section1, section2, section3] = theLegendContent.querySelectorAll(
-      "div"
+      ".the-legend-content-section"
     );
     const scrollPos = ev.target.scrollTop;
     const currentSlide = fullpage.getActiveSlide();
