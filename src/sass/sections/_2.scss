@@ -1,4 +1,24 @@
 .s2-s0 {
+  background-image: url("https://images.unsplash.com/photo-1538871526007-01b3d1c06072?ixlib=rb-0.3.5&s=9cef9cef297f01c1b176f74261a125fe&auto=format&fit=crop&w=1567&q=80");
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-bottom: 200px;
+    padding-right: 20px;
+  }
+
+  // Center content vertically in landscape
+  @media screen and (orientation: landscape) {
+    .content {
+      padding-bottom: 50vh;
+      & > div {
+        margin-bottom: -75px;
+      }
+    }
+  }
 }
 
 .s2-s1 {

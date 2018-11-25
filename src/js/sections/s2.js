@@ -2,10 +2,10 @@ import fullpage, { toggleScrolling } from "../fullpage";
 import { showSectionNav, hideSectionNav } from "../navigation";
 
 // SECTION 2 (The Legend)
-// Go to next slide when pressing "More"
+// Go to next slide when pressing "Read"
 const init = () => {
-  const theLegendBtn = document.querySelector(".the-legend-btn");
-  theLegendBtn.addEventListener("click", () => {
+  const readBtn = document.querySelector(".s2-s0 .read");
+  readBtn.addEventListener("click", () => {
     fullpage.moveTo(2, 1);
   });
 

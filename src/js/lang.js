@@ -57,9 +57,6 @@ export const updateContent = () => {
 
 const content = {
   en: {
-    "s1-s0": {
-      title: "English title"
-    },
     "s5-s0": {
       title: "Join the future",
       underTitle: "Get the broshure",
@@ -67,9 +64,6 @@ const content = {
     }
   },
   sv: {
-    "s1-s0": {
-      title: "Svensk titel"
-    },
     "s5-s0": {
       title: "Gå med i framtiden",
       underTitle: "Få tag i broschyren",
