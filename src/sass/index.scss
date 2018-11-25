@@ -279,7 +279,6 @@ header {
       a {
         color: white;
         text-decoration: none;
-        padding: 10px 10px 10px 0;
         display: flex;
         align-items: center;
 
@@ -303,18 +302,20 @@ header {
           }
         }
 
-        &:hover span:last-child {
-          display: inline-block;
-          opacity: 1;
-          display: flex;
-          align-items: center;
-          &:before {
-            content: "";
-            margin-right: 10px;
+        @media screen and (min-width: 600px) {
+          &:hover span:last-child {
             display: inline-block;
-            width: 20px;
-            height: 1px;
-            background-color: #fff;
+            opacity: 1;
+            display: flex;
+            align-items: center;
+            &:before {
+              content: "";
+              margin-right: 10px;
+              display: inline-block;
+              width: 20px;
+              height: 1px;
+              background-color: #fff;
+            }
           }
         }
       }
