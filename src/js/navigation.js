@@ -6,16 +6,37 @@ export const init = () => {
   const menuItems = document.querySelectorAll(".menu-item > a");
   const langSelect = document.querySelector(".lang select");
   const scrollTopBtn = document.querySelector(".s5-s0 .scrollTopBtn");
+  const navDashes = document.querySelectorAll(".nav-dash");
 
   // Event listeners
   scrollTopBtn.addEventListener("click", () => scrollTop());
+
   menuBtn.addEventListener("click", () => toggleFullpageNav());
+
   menuItems.forEach(item => {
     item.addEventListener("click", () => toggleFullpageNav());
   });
+
   langSelect.addEventListener("change", e => {
     setLang(e.target.value);
     updateContent();
+  });
+
+  navDashes.forEach(navDash => {
+    navDash.addEventListener("click", () => {
+      navDash.classList.add("clicked");
+      setTimeout(() => {
+        if (navDash.classList.contains("nav-dash--prev")) {
+          fullpage.moveSectionUp();
+        } else if (navDash.classList.contains("nav-dash--next")) {
+          fullpage.moveSectionDown();
+        }
+      }, 200);
+
+      setTimeout(() => {
+        navDash.classList.remove("clicked");
+      }, 700);
+    });
   });
 };
 
@@ -68,7 +89,9 @@ export const setActiveSection = (origin, dest) => {
     }
   };
 
-  nav.style.transform = `translateY(${positions.desktop[dest + 1]})`;
+  const device = window.innerWidth >= 600 ? "desktop" : "mobile";
+
+  nav.style.transform = `translateY(${positions[device][dest + 1]})`;
 
   const navItems = nav.querySelector("ul").children;
   navItems[origin].classList.remove("active");
@@ -87,7 +110,7 @@ export const showSectionNav = () => {
 
 export const setActiveSlide = slide => {
   const slideIndicator = document.querySelector(
-    ".section-nav li.active a > span"
+    ".section-nav li.active a > span:first-child"
   );
   slideIndicator.innerText = slide;
 };
