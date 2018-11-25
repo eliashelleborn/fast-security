@@ -28,7 +28,9 @@ const fullpageInstance = new fullpage("#fullpage", {
       if (!theLegendContent.classList.contains("minimized")) {
         theLegendContent.classList.add("open");
         hideSectionNav();
-        toggleScrolling(false);
+        if (window.innerWidth < 600) {
+          toggleScrolling(false);
+        }
       }
     } else {
       theLegendContent.classList.remove("open");

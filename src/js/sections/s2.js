@@ -18,21 +18,23 @@ const init = () => {
     const scrollPos = ev.target.scrollTop;
     const currentSlide = fullpage.getActiveSlide();
 
+    const scrollOffset = window.innerWidth >= 600 ? 300 : 100;
+
     // Go to slide connected with currently visible paragraph
     if (
       scrollPos > section1.offsetTop &&
-      scrollPos < section2.offsetTop - 100 &&
+      scrollPos < section2.offsetTop - scrollOffset &&
       currentSlide.index !== 1
     ) {
       fullpage.moveTo(2, 1);
     } else if (
-      scrollPos > section2.offsetTop - 100 &&
-      scrollPos < section3.offsetTop - 100 &&
+      scrollPos > section2.offsetTop - scrollOffset &&
+      scrollPos < section3.offsetTop - scrollOffset &&
       currentSlide.index !== 2
     ) {
       fullpage.moveTo(2, 2);
     } else if (
-      scrollPos > section3.offsetTop - 100 &&
+      scrollPos > section3.offsetTop - scrollOffset &&
       currentSlide.index !== 3
     ) {
       fullpage.moveTo(2, 3);

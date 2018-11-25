@@ -25,6 +25,7 @@
   overflow-y: scroll;
   padding: 0 30px;
   transition: 0.5s ease;
+  font-weight: 300;
 
   &-section {
     min-height: 50vh;
@@ -63,5 +64,31 @@
     .the-legend-content-section {
       display: none;
     }
+  }
+
+  @media screen and (min-width: 600px) {
+    right: 0;
+    top: 0;
+    left: auto;
+    padding: 0 15px;
+    width: 35vw;
+    min-width: 300px;
+
+    &-section {
+      min-height: 100vh;
+    }
+
+    &.open {
+      height: 100vh;
+      padding-top: 100px;
+    }
+
+    .drag-handle {
+      display: none;
+    }
+  }
+
+  @media screen and (min-width: 900px) {
+    font-size: 22px;
   }
 }
