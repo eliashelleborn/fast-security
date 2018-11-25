@@ -1,26 +1,7 @@
 @import "vendor/normalize";
 @import "vendor/fullpage";
 @import "fonts";
-
-@import "sections/1";
-@import "sections/2";
-@import "sections/3";
-@import "sections/4";
-@import "sections/5";
-
-@import "components/header";
-@import "components/menu";
-@import "components/sidenav";
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "AktivGrotesk", sans-serif;
-}
+@import "base";
 
 // main{
 //   transition: filter 0s .4s;
@@ -49,6 +30,7 @@ body {
   position: fixed;
   max-width: 1190px;
   z-index: 100;
+  pointer-events: none;
 
   @media screen and (min-width: 1190px) {
     margin-left: -595px;
@@ -138,3 +120,13 @@ button.read {
     }
   }
 }
+
+@import "sections/1";
+@import "sections/2";
+@import "sections/3";
+@import "sections/4";
+@import "sections/5";
+
+@import "components/header";
+@import "components/menu";
+@import "components/sidenav";
