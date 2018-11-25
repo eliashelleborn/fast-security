@@ -110,7 +110,7 @@ export const showSectionNav = () => {
 
 export const setActiveSlide = slide => {
   const slideIndicator = document.querySelector(
-    ".section-nav li.active a > span"
+    ".section-nav li.active a > span:first-child"
   );
   slideIndicator.innerText = slide;
 };
