@@ -4,8 +4,8 @@ import { showSectionNav, hideSectionNav } from "../navigation";
 // SECTION 2 (The Legend)
 // Go to next slide when pressing "More"
 const init = () => {
-  const theLegendBtn = document.querySelector(".the-legend-btn");
-  theLegendBtn.addEventListener("click", () => {
+  const readMoreBtn = document.querySelector(".s2-s0 .read");
+  readMoreBtn.addEventListener("click", () => {
     fullpage.moveTo(2, 1);
   });
 
