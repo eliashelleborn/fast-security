@@ -10,15 +10,18 @@ export const init = () => {
 
   // Event listeners
   scrollTopBtn.addEventListener("click", () => scrollTop());
+
   menuBtn.addEventListener("click", () => toggleFullpageNav());
+
   menuItems.forEach(item => {
     item.addEventListener("click", () => toggleFullpageNav());
   });
+
   langSelect.addEventListener("change", e => {
     setLang(e.target.value);
     updateContent();
   });
-  console.log(navDashes);
+
   navDashes.forEach(navDash => {
     navDash.addEventListener("click", () => {
       navDash.classList.add("clicked");
@@ -86,7 +89,9 @@ export const setActiveSection = (origin, dest) => {
     }
   };
 
-  nav.style.transform = `translateY(${positions.desktop[dest + 1]})`;
+  const device = window.innerWidth >= 600 ? "desktop" : "mobile";
+
+  nav.style.transform = `translateY(${positions[device][dest + 1]})`;
 
   const navItems = nav.querySelector("ul").children;
   navItems[origin].classList.remove("active");
