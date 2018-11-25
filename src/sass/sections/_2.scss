@@ -28,6 +28,7 @@
 
   &-section {
     min-height: 50vh;
+    display: block;
     h1 {
       font-size: 38px;
       font-weight: 700;
@@ -59,5 +60,8 @@
 
   &.minimized {
     height: 24px;
+    .the-legend-content-section {
+      display: none;
+    }
   }
 }
