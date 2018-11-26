@@ -1,13 +1,13 @@
 .s2-fixed {
   position: absolute;
   width: 100%;
+  max-width: 1190px;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
   padding-bottom: 200px;
-  padding-right: 20px;
   z-index: 10;
   color: white;
   opacity: 1;
@@ -17,6 +17,10 @@
     opacity: 0;
   }
 
+  & > div {
+    padding-right: 20px;
+  }
+
   // Center content vertically in landscape
   @media screen and (orientation: landscape) {
     padding-bottom: 50vh;
@@ -24,10 +28,17 @@
       margin-bottom: -75px;
     }
   }
+  @media screen and (min-width: 1190px) {
+    left: 50%;
+    margin-left: -595px;
+  }
 }
 
 .s2-s0 {
   background-image: url("https://images.unsplash.com/photo-1538871526007-01b3d1c06072?ixlib=rb-0.3.5&s=9cef9cef297f01c1b176f74261a125fe&auto=format&fit=crop&w=1567&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .s2-s1 {
