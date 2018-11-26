@@ -18,26 +18,6 @@ const fullpageInstance = new fullpage("#fullpage", {
   },
   onSlideLeave: function(section, origin, destination, direction) {
     setActiveSlide(destination.index);
-  },
-  afterSlideLoad: function(section, origin, destination, direction) {
-    // Section 2 (The Legend) functionality
-    const theLegendContent = document.querySelector(".the-legend-content");
-
-    // Hide sectionNav when opening content scroller and disable scroll navigation
-    if (section.index === 1 && destination.index >= 1) {
-      if (!theLegendContent.classList.contains("minimized")) {
-        theLegendContent.classList.add("open");
-        hideSectionNav();
-        if (window.innerWidth < 600) {
-          toggleScrolling(false);
-        }
-      }
-    } else {
-      theLegendContent.classList.remove("open");
-      theLegendContent.classList.remove("minimized");
-      showSectionNav();
-      toggleScrolling(true);
-    }
   }
 });
 

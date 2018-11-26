@@ -52,6 +52,7 @@
           width: 200px;
           transition: opacity 0.3s ease;
           font-size: 16px;
+          pointer-events: none;
           &:before {
             content: "";
             margin-right: 10px;
@@ -59,6 +60,7 @@
             width: 20px;
             height: 1px;
             background-color: #fff;
+            pointer-events: none;
           }
         }
 
