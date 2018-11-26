@@ -1,7 +1,18 @@
 @import "vendor/normalize";
 @import "vendor/fullpage";
+
 @import "fonts";
 @import "base";
+
+@import "sections/1";
+@import "sections/2";
+@import "sections/3";
+@import "sections/4";
+@import "sections/5";
+
+@import "components/header";
+@import "components/menu";
+@import "components/sidenav";
 
 // main{
 //   transition: filter 0s .4s;
@@ -53,6 +64,7 @@
   color: white;
   max-width: 1190px;
   margin: 0 auto;
+  z-index: 1;
 }
 
 .sv,
@@ -120,13 +132,3 @@ button.read {
     }
   }
 }
-
-@import "sections/1";
-@import "sections/2";
-@import "sections/3";
-@import "sections/4";
-@import "sections/5";
-
-@import "components/header";
-@import "components/menu";
-@import "components/sidenav";
