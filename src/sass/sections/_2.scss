@@ -12,6 +12,9 @@
   color: white;
   opacity: 1;
   transition: 0.3s ease;
+  -webkit-transform: translate3d(0, 0, 0);
+  -ms-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 
   &.hidden {
     opacity: 0;
@@ -42,15 +45,24 @@
 }
 
 .s2-s1 {
-  background-color: blue;
+  background-image: url("https://images.unsplash.com/photo-1538871526007-01b3d1c06072?ixlib=rb-0.3.5&s=9cef9cef297f01c1b176f74261a125fe&auto=format&fit=crop&w=1567&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .s2-s2 {
-  background-color: red;
+  background-image: url("https://images.unsplash.com/photo-1538871526007-01b3d1c06072?ixlib=rb-0.3.5&s=9cef9cef297f01c1b176f74261a125fe&auto=format&fit=crop&w=1567&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .s2-s3 {
-  background-color: green;
+  background-image: url("https://images.unsplash.com/photo-1538871526007-01b3d1c06072?ixlib=rb-0.3.5&s=9cef9cef297f01c1b176f74261a125fe&auto=format&fit=crop&w=1567&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .the-legend-content {
@@ -66,6 +78,7 @@
   padding: 0 30px;
   transition: 0.5s ease;
   font-weight: 300;
+  pointer-events: none;
 
   &-section {
     min-height: 50vh;
@@ -73,27 +86,23 @@
     h1 {
       font-size: 38px;
       font-weight: 700;
-      margin-top: 30px;
+      margin-top: 50px;
     }
   }
 
   .close-btn {
     position: fixed;
-    left: 50%;
-    padding: 10px 50px;
-    margin-left: -150px;
-    &:before {
-      content: "";
-      display: none;
-      width: 200px;
-      height: 4px;
-      background-color: #fff;
-      border-radius: 5px;
-    }
+    width: 100%;
+    padding: 20px 50px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   &.open {
     height: 50vh;
+    pointer-events: all;
     .close-btn:before {
       display: block;
     }

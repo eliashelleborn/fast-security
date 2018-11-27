@@ -5,13 +5,79 @@
 }
 
 .s4-s1 {
-  background-color: blue;
+  .container-fluid {
+    display: flex;
+    flex-direction: column;
+
+    .product {
+      height: 50vh;
+      background: black;
+    }
+
+    @media screen and (orientation: landscape) {
+      flex-direction: row;
+      .product {
+        height: 100vh;
+        width: 50%;
+      }
+    }
+  }
 }
 
 .s4-s2 {
-  background-color: red;
 }
 
 .s4-s3 {
-  background-color: green;
+}
+
+.product {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  h1 {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    width: 0;
+    white-space: nowrap;
+    transform: rotate(-90deg);
+    transform-origin: bottom;
+    color: white;
+  }
+
+  .colors {
+    margin: 0 0 40px 30px;
+    display: flex;
+    flex-direction: column;
+    & > div {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin: 5px 0;
+
+      &.selected {
+        border: 2px solid white;
+      }
+    }
+  }
+
+  @media screen and (orientation: landscape) and (max-height: 600px) {
+    h1 {
+      left: 25px;
+      top: 25px;
+      transform: rotate(0deg);
+      font-size: 30px;
+    }
+    .colors {
+      margin: 0 0 30px 40px;
+      flex-direction: row;
+      & > div {
+        margin: 0 5px;
+      }
+    }
+  }
 }

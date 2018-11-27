@@ -45,17 +45,12 @@
 
     .close-btn {
       position: relative;
-      left: 50%;
-      padding: 15px 50px;
-      margin-left: -150px;
-      &:before {
-        content: "";
-        display: none;
-        width: 200px;
-        height: 4px;
-        background-color: #fff;
-        border-radius: 5px;
-      }
+      width: 100%;
+      padding: 20px 50px;
+      left: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     &.open {
@@ -96,13 +91,22 @@
 }
 
 .s3-s1 {
-  background-color: blue;
+  background-image: url("https://images.unsplash.com/photo-1541445435581-4ad884431b0a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a1a53df1f7b4c57c94ac523940f02d57&auto=format&fit=crop&w=1567&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .s3-s2 {
-  background-color: red;
+  background-image: url("https://images.unsplash.com/photo-1541445435581-4ad884431b0a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a1a53df1f7b4c57c94ac523940f02d57&auto=format&fit=crop&w=1567&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .s3-s3 {
-  background-color: green;
+  background-image: url("https://images.unsplash.com/photo-1541445435581-4ad884431b0a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a1a53df1f7b4c57c94ac523940f02d57&auto=format&fit=crop&w=1567&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
