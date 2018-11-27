@@ -95,7 +95,7 @@
     width: 100%;
     padding: 20px 50px;
     left: 0;
-    display: flex;
+    display: none;
     justify-content: center;
     align-items: center;
   }
@@ -103,8 +103,8 @@
   &.open {
     height: 50vh;
     pointer-events: all;
-    .close-btn:before {
-      display: block;
+    .close-btn {
+      display: flex;
     }
   }
 
