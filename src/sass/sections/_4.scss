@@ -11,7 +11,7 @@
 
     .product {
       height: 50vh;
-      background: grey;
+      background: black;
     }
 
     @media screen and (orientation: landscape) {
@@ -25,11 +25,9 @@
 }
 
 .s4-s2 {
-  background-color: red;
 }
 
 .s4-s3 {
-  background-color: green;
 }
 
 .product {
@@ -60,6 +58,10 @@
       height: 30px;
       border-radius: 50%;
       margin: 5px 0;
+
+      &.selected {
+        border: 2px solid white;
+      }
     }
   }
 }
