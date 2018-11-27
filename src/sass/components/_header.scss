@@ -5,7 +5,7 @@ header {
   z-index: 1001;
   width: 100%;
   max-width: 1190px;
-  //background-color: rgba(238, 238, 238, 0.2);
+  padding: 50px 40px 50px 30px;
   color: #eee;
   justify-content: flex-end;
   align-items: center;
@@ -13,6 +13,11 @@ header {
   @media screen and (min-width: 1190px) {
     left: 50%;
     margin-left: -595px;
+    padding: 0;
+  }
+
+  img {
+    margin-right: auto;
   }
 
   .lang {
@@ -67,9 +72,10 @@ header {
     cursor: pointer;
     pointer-events: all;
     position: relative;
-    height: 13px;
-    width: 23px;
-    padding: 24px 30px;
+    height: 45px;
+    width: 45px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 50%;
 
     .bar1,
     .bar2,
@@ -79,23 +85,23 @@ header {
       background-color: #eee;
       transition: all 0.5s ease;
       position: absolute;
-      right: 16px;
+      left: 11px;
     }
 
     .bar1 {
-      top: 18px;
+      top: 16px;
     }
     .bar2 {
-      top: 26px;
+      top: 22px;
     }
     .bar3 {
-      top: 34px;
+      top: 28px;
     }
   }
 
   .menu-btn.active {
     .bar1 {
-      top: 26px;
+      top: 22px;
       -webkit-transform: rotate(-45deg);
       transform: rotate(-45deg);
     }
@@ -105,7 +111,7 @@ header {
     }
 
     .bar3 {
-      top: 26px;
+      top: 22px;
       -webkit-transform: rotate(45deg);
       transform: rotate(45deg);
     }
