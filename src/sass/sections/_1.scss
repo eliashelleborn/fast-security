@@ -1,2 +1,21 @@
-.s1-s0{
+.s1-s0 {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 100px;
+
+    img {
+      max-width: 70%;
+    }
+    p {
+      font-weight: 300;
+      font-size: 20px;
+      margin-top: 7px;
+    }
+  }
 }

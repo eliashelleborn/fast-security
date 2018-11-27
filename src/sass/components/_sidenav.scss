@@ -1,0 +1,104 @@
+.section-nav {
+  height: 290px;
+  align-items: center;
+  position: absolute;
+  z-index: 10;
+  left: 11px;
+  top: 50%;
+  margin-top: -141px;
+  transition: transform 0.7s ease, opacity 0.2s ease;
+  transform: translateY(112px);
+  opacity: 1;
+  max-width: 1190px;
+
+  &.hidden {
+    opacity: 0;
+  }
+
+  @media screen and (min-width: 600px) {
+    margin-top: -139px;
+    transform: translateY(103px);
+  }
+
+  ul {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    color: white;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    li {
+      font-size: 16px;
+      font-weight: 400;
+      transition: all 0.7s ease;
+
+      a {
+        color: white;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        pointer-events: all;
+
+        span:last-child {
+          display: inline-block;
+          position: absolute;
+          left: 30px;
+          display: flex;
+          align-items: center;
+          opacity: 0;
+          width: 200px;
+          transition: opacity 0.3s ease;
+          font-size: 16px;
+          pointer-events: none;
+          &:before {
+            content: "";
+            margin-right: 10px;
+            display: inline-block;
+            width: 20px;
+            height: 1px;
+            background-color: #fff;
+            pointer-events: none;
+          }
+        }
+
+        @media screen and (min-width: 600px) {
+          &:hover span:last-child {
+            display: inline-block;
+            opacity: 1;
+            display: flex;
+            align-items: center;
+            &:before {
+              content: "";
+              margin-right: 10px;
+              display: inline-block;
+              width: 20px;
+              height: 1px;
+              background-color: #fff;
+            }
+          }
+        }
+      }
+
+      &.active {
+        margin-left: -1px;
+        font-size: 74px;
+        font-weight: bold;
+        span:last-child {
+          display: none;
+        }
+        &:hover span:last-child {
+          display: none;
+        }
+      }
+
+      @media screen and (max-width: 600px) {
+        &.active {
+          font-size: 56px;
+        }
+      }
+    }
+  }
+}

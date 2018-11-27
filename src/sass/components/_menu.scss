@@ -1,0 +1,96 @@
+.full-nav {
+  pointer-events: none;
+  height: 0px;
+  width: 100%;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: #222222bd;
+  backdrop-filter: blur(5px);
+  overflow-y: hidden;
+  transition: 0.5s;
+
+  .closebtn {
+    text-decoration: none;
+    color: #818181;
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+
+  ul {
+    padding: 0;
+    transition: transform 0.5s;
+
+    transform: translate(0px, -200px);
+
+    li {
+      padding: 10px;
+      font-size: 6px;
+      font-weight: bold;
+      color: transparent;
+      display: block;
+      transition: 0.5s;
+      cursor: pointer;
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      span {
+        vertical-align: text-top;
+        font-size: 12px;
+        font-weight: 500;
+      }
+    }
+
+    li:hover a {
+      color: rgb(100, 100, 100);
+    }
+
+    li a:focus {
+      color: #00205a;
+    }
+  }
+
+  @media screen and (max-height: 450px) {
+    overflow-y: auto;
+
+    li {
+      font-size: 20px;
+    }
+
+    .closebtn {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+}
+
+.full-nav.open {
+  height: 100%;
+  pointer-events: all;
+
+  ul {
+    // Translate into initial position
+    transform: translate(0px, 0px);
+
+    li {
+      font-size: 48px;
+      color: #eee;
+    }
+  }
+}
+
+.overlay-content {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 30px;
+}

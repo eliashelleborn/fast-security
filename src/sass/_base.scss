@@ -1,0 +1,21 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "AktivGrotesk", sans-serif;
+}
+
+h1 {
+  font-size: 38px;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+}
+
+p {
+  margin: 0 0 10px 0;
+  font-size: 20px;
+  font-weight: 300;
+}
