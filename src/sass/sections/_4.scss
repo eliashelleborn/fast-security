@@ -2,6 +2,23 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  .content {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-bottom: 200px;
+    padding-right: 25px;
+    text-align: center;
+
+    @media screen and (orientation: landscape) {
+      padding-bottom: 50vh;
+      padding-right: 100px;
+      & > div {
+        margin-bottom: -45px;
+      }
+    }
+  }
 }
 
 .s4-s1 {
