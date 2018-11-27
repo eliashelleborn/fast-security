@@ -5,7 +5,23 @@
 }
 
 .s4-s1 {
-  background-color: blue;
+  .container-fluid {
+    display: flex;
+    flex-direction: column;
+
+    .product {
+      height: 50vh;
+      background: grey;
+    }
+
+    @media screen and (orientation: landscape) {
+      flex-direction: row;
+      .product {
+        height: 100vh;
+        width: 50%;
+      }
+    }
+  }
 }
 
 .s4-s2 {
@@ -14,4 +30,36 @@
 
 .s4-s3 {
   background-color: green;
+}
+
+.product {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  h1 {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    width: 0;
+    white-space: nowrap;
+    transform: rotate(-90deg);
+    transform-origin: bottom;
+    color: white;
+  }
+
+  .colors {
+    margin: 0 0 40px 30px;
+    display: flex;
+    flex-direction: column;
+    & > div {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      margin: 5px 0;
+    }
+  }
 }
