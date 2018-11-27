@@ -6,7 +6,8 @@ export const init = () => {
   const menuItems = document.querySelectorAll(".menu-item > a");
   const langSelect = document.querySelector(".lang select");
   const scrollTopBtn = document.querySelector(".s5-s0 .scrollTopBtn");
-  const navDashes = document.querySelectorAll(".nav-dash");
+  const navDashesY = document.querySelectorAll(".nav-dashY");
+  const navDashesX = document.querySelectorAll(".nav-dashX");
 
   // Event listeners
   scrollTopBtn.addEventListener("click", () => scrollTop());
@@ -22,13 +23,13 @@ export const init = () => {
     updateContent();
   });
 
-  navDashes.forEach(navDash => {
+  navDashesY.forEach(navDash => {
     navDash.addEventListener("click", () => {
       navDash.classList.add("clicked");
       setTimeout(() => {
-        if (navDash.classList.contains("nav-dash--prev")) {
+        if (navDash.classList.contains("nav-dashY--prev")) {
           fullpage.moveSectionUp();
-        } else if (navDash.classList.contains("nav-dash--next")) {
+        } else if (navDash.classList.contains("nav-dashY--next")) {
           fullpage.moveSectionDown();
         }
       }, 200);
@@ -36,6 +37,15 @@ export const init = () => {
       setTimeout(() => {
         navDash.classList.remove("clicked");
       }, 700);
+    });
+  });
+  navDashesX.forEach(navDash => {
+    navDash.addEventListener("click", () => {
+      if (navDash.classList.contains("nav-dashX--prev")) {
+        fullpage.moveSlideLeft();
+      } else if (navDash.classList.contains("nav-dashX--next")) {
+        fullpage.moveSlideRight();
+      }
     });
   });
 };

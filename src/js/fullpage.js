@@ -19,12 +19,16 @@ const fullpageInstance = new fullpage("#fullpage", {
   onSlideLeave: function(section, origin, destination, direction) {
     setActiveSlide(destination.index);
 
+    const drawer = document.querySelector(".the-legend-content");
+
     // Hide section nav if not on index slide
     // with the exception of section 2 (The Legend)
     if (destination.index > 0 && section.index !== 1) {
       hideSectionNav();
     } else {
-      showSectionNav();
+      if (!drawer.classList.contains("open")) {
+        showSectionNav();
+      }
     }
   }
 });

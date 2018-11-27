@@ -64,4 +64,20 @@
       }
     }
   }
+
+  @media screen and (orientation: landscape) and (max-height: 600px) {
+    h1 {
+      left: 25px;
+      top: 25px;
+      transform: rotate(0deg);
+      font-size: 30px;
+    }
+    .colors {
+      margin: 0 0 30px 40px;
+      flex-direction: row;
+      & > div {
+        margin: 0 5px;
+      }
+    }
+  }
 }

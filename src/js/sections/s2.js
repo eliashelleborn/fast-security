@@ -49,11 +49,11 @@ const toggleContent = () => {
   s2Fixed.classList.toggle("hidden");
 
   if (theLegendContent.classList.contains("open")) {
-    hideSectionNav();
     toggleScrolling(false);
     if (currentSlide.index === 0) {
       fullpage.moveTo(2, 1);
     }
+    hideSectionNav();
   } else {
     showSectionNav();
     toggleScrolling(true);

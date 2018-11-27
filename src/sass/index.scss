@@ -13,6 +13,7 @@
 @import "components/header";
 @import "components/menu";
 @import "components/sidenav";
+@import "components/navdash";
 
 // main{
 //   transition: filter 0s .4s;
@@ -32,6 +33,10 @@
   background: red;
   z-index: 9;
 } */
+
+.slide {
+  position: relative;
+}
 
 .fixed-container {
   left: 0;
@@ -79,33 +84,6 @@
   display: none;
   &.current-lang {
     display: block;
-  }
-}
-
-.nav-dash {
-  position: absolute;
-  left: 50%;
-  margin-left: -10px;
-  width: 20px;
-  height: 35px;
-  background-color: #fff;
-  z-index: 2000;
-  transition: 0.3s ease;
-  -webkit-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-  &:hover {
-    height: 50px;
-  }
-  &.clicked {
-    height: 100vh;
-  }
-
-  &--next {
-    bottom: 0;
-  }
-  &--prev {
-    top: 0;
   }
 }
 
