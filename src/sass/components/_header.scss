@@ -10,10 +10,15 @@ header {
   justify-content: flex-end;
   align-items: center;
 
+  @media screen and (orientation: landscape) and (max-height: 500px) {
+    padding-left: 50px;
+  }
+
   @media screen and (min-width: 1190px) {
     left: 50%;
     margin-left: -595px;
     padding: 0;
+    padding-top: 50px;
   }
 
   img {
