@@ -1416,10 +1416,8 @@ header .menu-btn.active .bar3 {
   margin-left: -1px;
   font-size: 74px;
   font-weight: bold;
-}
-
-.section-nav ul li.active span:last-child {
-  display: none;
+  span: last-child;
+  span-display: none;
 }
 
 .section-nav ul li.active:hover span:last-child {
@@ -1428,7 +1426,7 @@ header .menu-btn.active .bar3 {
 
 @media screen and (max-width: 600px) {
   .section-nav ul li.active {
-    font-size: 56px;
+    font-size: 28px;
   }
 }
 
