@@ -6,13 +6,13 @@
   left: 11px;
   top: 50%;
   margin-top: -141px;
-  transition: transform 0.7s ease, opacity 0.2s ease;
+  transition: transform 0.7s ease, opacity 0.2s ease, left 0.5s ease-out;
   transform: translateY(112px);
   opacity: 1;
   max-width: 1190px;
 
   &.hidden {
-    opacity: 0;
+    left: -100px;
   }
 
   @media screen and (min-width: 600px) {
