@@ -2,14 +2,26 @@ const colorBtnGroups = document.querySelectorAll(".colors");
 
 const clock = document.querySelector(".s4-s1 .product:first-child");
 const miniature = document.querySelector(".s4-s1 .product:last-child");
+const interior = document.querySelector(".s3-s1 .product:first-child");
+const exterior = document.querySelector(".s3-s1 .product:last-child");
 
 const imgs = {
-  clock: {
+  watch: {
     pink: "#D49B9B",
     green: "#2E3921",
     black: "#000000"
   },
   miniature: {
+    pink: "#D49B9B",
+    green: "#2E3921",
+    black: "#000000"
+  },
+  interior: {
+    pink: "#D49B9B",
+    green: "#2E3921",
+    black: "#000000"
+  },
+  exterior: {
     pink: "#D49B9B",
     green: "#2E3921",
     black: "#000000"
