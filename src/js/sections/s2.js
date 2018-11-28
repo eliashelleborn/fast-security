@@ -1,17 +1,16 @@
-import fullpage, { toggleScrolling } from "../fullpage";
+/* import fullpage, { toggleScrolling } from "../fullpage";
 import { showSectionNav, hideSectionNav } from "../navigation";
 
 const theLegendContent = document.querySelector(".the-legend-content");
 const closeBtn = theLegendContent.querySelector(".close-btn");
 const s2Fixed = document.querySelector(".s2-fixed");
-const readBtn = document.querySelector(".s2-fixed .read");
+const readBtn = document.querySelector(".s2-fixed .read"); */
 
 const init = () => {
-  readBtn.addEventListener("click", () => toggleContent());
-  closeBtn.addEventListener("click", () => toggleContent());
-
+  /* readBtn.addEventListener("click", () => toggleContent());
+  closeBtn.addEventListener("click", () => toggleContent()); */
   // Scroll Spy
-  theLegendContent.addEventListener("scroll", ev => {
+  /* theLegendContent.addEventListener("scroll", ev => {
     const [section1, section2, section3] = theLegendContent.querySelectorAll(
       ".the-legend-content-section"
     );
@@ -39,10 +38,10 @@ const init = () => {
     ) {
       fullpage.moveTo(2, 3);
     }
-  });
+  }); */
 };
 
-const toggleContent = () => {
+/* const toggleContent = () => {
   const currentSlide = fullpage.getActiveSlide();
 
   theLegendContent.classList.toggle("open");
@@ -58,6 +57,6 @@ const toggleContent = () => {
     showSectionNav();
     toggleScrolling(true);
   }
-};
+}; */
 
 export default init;
