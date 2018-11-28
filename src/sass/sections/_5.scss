@@ -10,6 +10,10 @@
 
     .title {
       margin-bottom: 0px;
+
+      @media screen and (max-width: 600px) {
+        font-size: 30px;
+      }
     }
 
     .underTitle {
