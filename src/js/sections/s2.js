@@ -1,16 +1,16 @@
 import fullpage, { toggleScrolling } from "../fullpage";
 import { showSectionNav, hideSectionNav } from "../navigation";
 
-// SECTION 2 (The Legend)
-// Go to next slide when pressing "Read"
+const theLegendContent = document.querySelector(".the-legend-content");
+const closeBtn = theLegendContent.querySelector(".close-btn");
+const s2Fixed = document.querySelector(".s2-fixed");
+const readBtn = document.querySelector(".s2-fixed .read");
+
 const init = () => {
-  const readBtn = document.querySelector(".s2-s0 .read");
-  readBtn.addEventListener("click", () => {
-    fullpage.moveTo(2, 1);
-  });
+  readBtn.addEventListener("click", () => toggleContent());
+  closeBtn.addEventListener("click", () => toggleContent());
 
   // Scroll Spy
-  const theLegendContent = document.querySelector(".the-legend-content");
   theLegendContent.addEventListener("scroll", ev => {
     const [section1, section2, section3] = theLegendContent.querySelectorAll(
       ".the-legend-content-section"
@@ -40,21 +40,24 @@ const init = () => {
       fullpage.moveTo(2, 3);
     }
   });
+};
 
-  // Drag Handle
-  // When clicked minimize content overlay and allow fullpage.js navigation
-  // TODO: SWIPE
-  const dragHandle = theLegendContent.querySelector(".drag-handle");
-  dragHandle.addEventListener("click", () => {
-    theLegendContent.classList.toggle("minimized");
-    if (theLegendContent.classList.contains("minimized")) {
-      showSectionNav();
-      toggleScrolling(true);
-    } else {
-      hideSectionNav();
-      toggleScrolling(false);
+const toggleContent = () => {
+  const currentSlide = fullpage.getActiveSlide();
+
+  theLegendContent.classList.toggle("open");
+  s2Fixed.classList.toggle("hidden");
+
+  if (theLegendContent.classList.contains("open")) {
+    hideSectionNav();
+    toggleScrolling(false);
+    if (currentSlide.index === 0) {
+      fullpage.moveTo(2, 1);
     }
-  });
+  } else {
+    showSectionNav();
+    toggleScrolling(true);
+  }
 };
 
 export default init;

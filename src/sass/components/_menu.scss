@@ -73,6 +73,7 @@
 
 .full-nav.open {
   height: 100%;
+  pointer-events: all;
 
   ul {
     // Translate into initial position
