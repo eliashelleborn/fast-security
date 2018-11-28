@@ -5,7 +5,7 @@ header {
   z-index: 1001;
   width: 100%;
   max-width: 1190px;
-  padding: 50px 40px 50px 30px;
+  padding: 35px 40px 50px 30px;
   color: #eee;
   justify-content: flex-end;
   align-items: center;
@@ -21,9 +21,12 @@ header {
     padding-top: 50px;
   }
 
-  img {
+  a {
     margin-right: auto;
-    width: 100px;
+    pointer-events: all;
+    img {
+      width: 100px;
+    }
   }
 
   .lang {
