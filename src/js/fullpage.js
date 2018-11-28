@@ -16,19 +16,31 @@ const fullpageInstance = new fullpage("#fullpage", {
   onLeave: (origin, destination, direction) => {
     setActiveSection(origin.index, destination.index);
   },
+  afterLoad: (origin, destination, direction) => {
+    const drawer = document.querySelector(".s3-s0 .drawer");
+    const currentSlide = fullpage_api.getActiveSlide();
+    if (currentSlide.index > 0) {
+      hideSectionNav();
+    } else {
+      if (destination.index === 2 && drawer.classList.contains("open")) {
+        hideSectionNav();
+      } else {
+        showSectionNav();
+      }
+    }
+  },
   onSlideLeave: function(section, origin, destination, direction) {
     setActiveSlide(destination.index);
 
-    const drawer = document.querySelector(".the-legend-content");
+    const drawer = document.querySelector(".s3-s0 .drawer");
 
-    // Hide section nav if not on index slide
-    // with the exception of section 2 (The Legend)
-    if (destination.index > 0 && section.index !== 1) {
+    if (destination.index > 0) {
       hideSectionNav();
     } else {
-      if (!drawer.classList.contains("open")) {
-        showSectionNav();
+      if (section.index === 2 && drawer.classList.contains("open")) {
+        return;
       }
+      showSectionNav();
     }
   }
 });

@@ -2,7 +2,10 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+        />
         <meta http-equiv="X-UA-Compatible" content="ie=edge" />
         <title>Fast Security</title>
         <link rel="stylesheet" href="index.css" />
@@ -10,7 +13,10 @@
 
     <body>
         <header>
-            <img src="/assets/img/fs-logo.svg" alt="FS Logo" />
+            <a href="#1">
+                <img src="/assets/img/fs-logo.png" alt="FS Logo" />
+            </a>
+
             <div class="lang">
                 <select name="lang" id="">
                     <option selected value="en">EN</option>
@@ -82,78 +88,106 @@
             <div id="fullpage">
                 <!-- Home / Fast Security section -->
                 <div class="section">
-                    <div
-                        class="slide s1-s0"
-                        style="background-image: url('https://images.unsplash.com/photo-1528420228020-89e7d15fc099?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b460186c08d4fbc389f1cf5924573a8f&auto=format&fit=crop&w=2089&q=80');"
-                    >
+                    <div class="slide s1-s0">
+                        <picture>
+                            <img
+                                class="BG"
+                                src="https://images.unsplash.com/photo-1528420228020-89e7d15fc099?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=b460186c08d4fbc389f1cf5924573a8f&auto=format&fit=crop&w=2089&q=80"
+                                alt=""
+                            />
+                        </picture>
                         <div class="container">
                             <div class="content">
-                                <img src="/assets/img/FAST.svg" alt="Fast" />
-                                <img
-                                    src="/assets/img/SECURITY-1.0.svg"
-                                    alt="Security 1.0"
-                                />
+                                <div>
+                                    <img
+                                        src="/assets/img/FAST.svg"
+                                        alt="Fast"
+                                    />
+                                    <img
+                                        src="/assets/img/SECURITY-1.0.svg"
+                                        alt="Security 1.0"
+                                    />
+                                </div>
+
                                 <p>Made by SAAB</p>
                             </div>
                         </div>
                     </div>
+
                     <div class="nav-dashY nav-dashY--next"></div>
                 </div>
 
                 <!-- History / legend section -->
-                <div class="section">
+                <div class="section s2">
                     <div class="nav-dashY nav-dashY--prev"></div>
 
-                    <div class="s2-fixed">
-                        <div>
-                            <h1 class="title">The<br />Legend</h1>
-                            <button class="read">Read</button>
+                    <div class="slide s2-s0">
+                        <div class="container">
+                            <div class="content">
+                                <div>
+                                    <h1 class="title">The Legend</h1>
+                                    <p>SAAB</p>
+                                    <button class="read">Read</button>
+                                </div>
+                            </div>
+                            <div class="nav-dashX nav-dashX--next"></div>
                         </div>
                     </div>
-
-                    <div class="the-legend-content">
-                        <div class="close-btn">
-                            <img
-                                src="/assets/img/drawer-arrow.svg"
-                                alt="Close drawer"
-                            />
+                    <div class="slide s2-s1">
+                        <div class="nav-dashX nav-dashX--prev"></div>
+                        <div class="container">
+                            <div class="content">
+                                <div class="box">
+                                    <h1>The Beginning</h1>
+                                    <p>
+                                        Saab started life in 1937 in
+                                        Trollhättan, Sweden, as an aeroplane
+                                        manufacturer to provide aircraft for the
+                                        Swedish Air Force, just as Europe was
+                                        steeling itself for another war. The
+                                        company's full name was Svenska Aeroplan
+                                        Aktiebolaget, giving the world the
+                                        acronym Saab.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="the-legend-content-section">
-                            <h1>The Beginning</h1>
-                            <p>
-                                Saab started life in 1937 in Trollhättan,
-                                Sweden, as an aeroplane manufacturer to provide
-                                aircraft for the Swedish Air Force, just as
-                                Europe was steeling itself for another war. The
-                                company's full name was Svenska Aeroplan
-                                Aktiebolaget, giving the world the acronym Saab.
-                            </p>
+                        <div class="nav-dashX nav-dashX--next"></div>
+                    </div>
+                    <div class="slide s2-s2">
+                        <div class="nav-dashX nav-dashX--prev"></div>
+                        <div class="container">
+                            <div class="content">
+                                <div class="box">
+                                    <h1>The Car</h1>
+                                    <p>
+                                        The head office soon moved to the
+                                        Swedish university town of Linköping,
+                                        where this massive company has its
+                                        largest operation today. It was there in
+                                        1945, amid various dreams of
+                                        diversification, that a project to
+                                        develop motor cars got underway.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
-                        <div class="the-legend-content-section">
-                            <h1>The Car</h1>
-                            <p>
-                                The head office soon moved to the Swedish
-                                university town of Linköping, where this massive
-                                company has its largest operation today. It was
-                                there in 1945, amid various dreams of
-                                diversification, that a project to develop motor
-                                cars got underway.
-                            </p>
-                        </div>
-                        <div class="the-legend-content-section">
-                            <h1>The Future</h1>
-                            <p>
-                                Today we are starting a new chapter. Fast
-                                Security, FS. Is the future car.
-                            </p>
+                        <div class="nav-dashX nav-dashX--next"></div>
+                    </div>
+                    <div class="slide s2-s3">
+                        <div class="nav-dashX nav-dashX--prev"></div>
+                        <div class="container">
+                            <div class="content">
+                                <div class="box">
+                                    <h1>The Future</h1>
+                                    <p>
+                                        Today we are starting a new chapter.
+                                        Fast Security, FS. Is the future car.
+                                    </p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-
-                    <div class="slide s2-s0"><div class="container"></div></div>
-                    <div class="slide s2-s1"><div class="container"></div></div>
-                    <div class="slide s2-s2"><div class="container"></div></div>
-                    <div class="slide s2-s3"><div class="container"></div></div>
-
                     <div class="nav-dashY nav-dashY--next"></div>
                 </div>
 
@@ -169,18 +203,15 @@
                                     <p>
                                         Many people still think Saab makes cars,
                                         and that is correct.
-                                    </p>
-                                    <!--
-                                        <p >
-                                            Many people still think Saab makes cars,
-                                            and that is correct. We are on the go
-                                            for the future. Saab is very much alive
-                                            and well, as one of the world’s most
-                                            innovative companies. And now we are
-                                            proud to present our car for the future:
+                                        <span>
+                                            We are on the go for the future.
+                                            Saab is very much alive and well, as
+                                            one of the world’s most innovative
+                                            companies. And now we are proud to
+                                            present our car for the future:
                                             FastSecurity, FS.
-                                        </p>
-                                    -->
+                                        </span>
+                                    </p>
                                     <button class="read">Read</button>
                                 </div>
                             </div>
@@ -278,7 +309,7 @@
                             <div class="content">
                                 <div>
                                     <h1 class="title">Essentials</h1>
-                                    <p class="sub-title">The essentials</p>
+                                    <p>The essentials</p>
                                 </div>
                             </div>
                         </div>

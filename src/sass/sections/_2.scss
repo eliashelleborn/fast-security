@@ -1,47 +1,110 @@
-.s2-fixed {
-  position: absolute;
-  width: 100%;
-  max-width: 1190px;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-end;
-  padding-bottom: 200px;
-  z-index: 10;
-  color: white;
-  opacity: 1;
-  transition: 0.3s ease;
-  -webkit-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-
-  &.hidden {
-    opacity: 0;
-  }
-
-  & > div {
-    padding-right: 20px;
-  }
-
-  // Center content vertically in landscape
-  @media screen and (orientation: landscape) {
-    padding-bottom: 50vh;
-    & > div {
-      margin-bottom: -75px;
-    }
-  }
-  @media screen and (min-width: 1190px) {
-    left: 50%;
-    margin-left: -595px;
-  }
-}
-
 .s2-s0 {
   background-image: url("https://images.unsplash.com/photo-1538871526007-01b3d1c06072?ixlib=rb-0.3.5&s=9cef9cef297f01c1b176f74261a125fe&auto=format&fit=crop&w=1567&q=80");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
+  .content {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    padding-bottom: 20vh;
+    padding-right: 35px;
+    text-align: left;
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+
+      p {
+        margin: 0;
+        font-size: 18px;
+        font-weight: 300;
+      }
+      .read {
+        margin-right: -20px;
+      }
+    }
+
+    @media screen and (orientation: landscape) and (max-height: 500px) {
+      padding-right: 15vw;
+      padding-bottom: 15vh;
+    }
+
+    @media screen and (min-width: 1000px) {
+      padding-right: 0;
+      padding-left: 50%;
+      justify-content: flex-start;
+      & > div {
+        align-items: flex-start;
+      }
+      br {
+        display: none;
+      }
+      h1 {
+        font-size: 60px;
+        margin: 0;
+      }
+      p {
+        font-size: 30px;
+        margin: 0;
+      }
+    }
+  }
+}
+
+.s2 .content .box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 40vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 15px 20px;
+  padding-bottom: 45px;
+
+  h1 {
+    margin-bottom: 5px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  @media screen and (orientation: landscape) and (max-height: 500px) {
+    padding-bottom: 35px;
+    padding-right: 75px;
+    padding-left: 75px;
+    h1 {
+      font-size: 25px;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+
+  @media screen and (orientation: portrait) and (max-height: 600px) {
+    padding-bottom: 35px;
+    h1 {
+      font-size: 28px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+
+  @media screen and (min-width: 1000px) {
+    width: calc(50% - 50px);
+    height: calc(50% - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 50px;
+    right: 0;
+    left: auto;
+    background-color: rgba(0, 0, 0, 0);
+  }
 }
 
 .s2-s1 {
@@ -63,74 +126,4 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-}
-
-.the-legend-content {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 0px;
-  z-index: 1000;
-  color: white;
-  background-color: rgba(0, 0, 0, 0.75);
-  overflow-y: scroll;
-  padding: 0 30px;
-  transition: 0.5s ease;
-  font-weight: 300;
-  pointer-events: none;
-
-  &-section {
-    min-height: 50vh;
-    display: block;
-    h1 {
-      font-size: 38px;
-      font-weight: 700;
-      margin-top: 50px;
-    }
-  }
-
-  .close-btn {
-    position: fixed;
-    width: 100%;
-    padding: 20px 50px;
-    left: 0;
-    display: none;
-    justify-content: center;
-    align-items: center;
-  }
-
-  &.open {
-    height: 50vh;
-    pointer-events: all;
-    .close-btn {
-      display: flex;
-    }
-  }
-
-  @media screen and (min-width: 600px) {
-    right: 0;
-    top: 0;
-    left: auto;
-    padding: 0 15px;
-    width: 35vw;
-    min-width: 300px;
-
-    &-section {
-      min-height: 100vh;
-    }
-
-    &.open {
-      height: 100vh;
-      padding-top: 100px;
-    }
-
-    .close-btn {
-      display: none;
-    }
-  }
-
-  @media screen and (min-width: 900px) {
-    font-size: 22px;
-  }
 }

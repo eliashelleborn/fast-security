@@ -13,16 +13,18 @@ const init = () => {
 
 const toggleContent = () => {
   const currentSlide = fullpage.getActiveSlide();
-
-  drawerContent.classList.toggle("open");
-  previewContent.classList.toggle("hidden");
-
-  console.log(previewContent);
-
-  if (drawerContent.classList.contains("open")) {
-    hideSectionNav();
+  if (window.innerWidth >= 1000) {
+    const fullText = document.querySelector(".s3-s0 .content p > span");
+    fullText.style.maxHeight = "200px";
   } else {
-    showSectionNav();
+    drawerContent.classList.toggle("open");
+    previewContent.classList.toggle("hidden");
+
+    if (drawerContent.classList.contains("open")) {
+      hideSectionNav();
+    } else {
+      showSectionNav();
+    }
   }
 };
 
