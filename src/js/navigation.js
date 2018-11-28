@@ -5,6 +5,7 @@ export const init = () => {
   const menuBtn    = document.querySelector(".menu-btn");
   const menuItems  = document.querySelectorAll(".menu-item > a");
   const langSelect = document.querySelector(".lang select");
+  
   // const scrollTopBtn = document.querySelector(".s5-s0 .scrollTopBtn");
   const navDashesY = document.querySelectorAll(".nav-dashY");
   const navDashesX = document.querySelectorAll(".nav-dashX");
@@ -59,10 +60,11 @@ export const toggleFullpageNav = () => {
   const fullNav = document.querySelector(".full-nav");
   const menuBtn = document.querySelector(".menu-btn");
   const main    = document.querySelector("main");
+  const lang    = document.querySelector(".lang");
 
   if (fullNav.classList.contains("open")) {
+    lang.classList.remove("show");
     fullNav.classList.remove("open");
-
     menuBtn.classList.remove("active");
     // main.classList.remove("blur");
     const currentSlide = fullpage.getActiveSlide();
@@ -70,8 +72,8 @@ export const toggleFullpageNav = () => {
       showSectionNav();
     }
   } else {
+    lang.classList.add("show");
     fullNav.classList.add("open");
-
     menuBtn.classList.add("active");
     // main.classList.add("blur");
     hideSectionNav();
