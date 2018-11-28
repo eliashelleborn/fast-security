@@ -1,6 +1,6 @@
 const colorBtnGroups = document.querySelectorAll(".colors");
 
-const clock = document.querySelector(".s4-s1 .product:first-child");
+const watch = document.querySelector(".s4-s1 .product:first-child");
 const miniature = document.querySelector(".s4-s1 .product:last-child");
 const interior = document.querySelector(".s3-s1 .product:first-child");
 const exterior = document.querySelector(".s3-s1 .product:last-child");
