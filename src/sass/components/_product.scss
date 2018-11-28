@@ -7,7 +7,7 @@
   background-position: center;
   background-repeat: no-repeat;
   height: 50%;
-  background: black;
+
   h1 {
     position: absolute;
     right: 25px;
@@ -18,12 +18,14 @@
     transform: rotate(-90deg);
     transform-origin: bottom;
     color: white;
+    transition: 0.3s ease;
   }
 
   .colors {
     margin: 0 0 40px 30px;
     display: flex;
     flex-direction: column;
+    transition: 0.3s ease;
     & > div {
       width: 30px;
       height: 30px;

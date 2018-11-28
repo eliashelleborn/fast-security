@@ -29,7 +29,11 @@ export const init = () => {
       navDash.classList.add("clicked");
       setTimeout(() => {
         if (navDash.classList.contains("nav-dashY--prev")) {
-          fullpage.moveSectionUp();
+          if (navDash.classList.contains("to-top")) {
+            fullpage.moveTo(1);
+          } else {
+            fullpage.moveSectionUp();
+          }
         } else if (navDash.classList.contains("nav-dashY--next")) {
           fullpage.moveSectionDown();
         }
@@ -62,14 +66,26 @@ export const toggleFullpageNav = () => {
   const lang = document.querySelector(".lang");
   const currentSlide = fullpage.getActiveSlide();
   const currentSlideBackgrounds = currentSlide.item.querySelectorAll(".BG");
-  const currentSlideContent = currentSlide.item.querySelector(".content");
+  const currentSlideContent = currentSlide.item.querySelectorAll(
+    ".content, .product"
+  );
   const blurredBackgrounds = document.querySelectorAll(".BG.blurred");
 
   if (fullNav.classList.contains("open")) {
     lang.classList.remove("show");
     fullNav.classList.remove("open");
     menuBtn.classList.remove("active");
-    currentSlideContent.style.opacity = "1";
+    currentSlideContent.forEach(content => {
+      if (content.classList.contains("product")) {
+        Array.from(content.children).forEach(child => {
+          if (!child.classList.contains("BG")) {
+            child.style.opacity = "1";
+          }
+        });
+      } else {
+        content.style.opacity = "1";
+      }
+    });
     blurredBackgrounds.forEach(bg => {
       bg.classList.remove("blurred");
     });
@@ -80,7 +96,17 @@ export const toggleFullpageNav = () => {
     lang.classList.add("show");
     fullNav.classList.add("open");
     menuBtn.classList.add("active");
-    currentSlideContent.style.opacity = "0";
+    currentSlideContent.forEach(content => {
+      if (content.classList.contains("product")) {
+        Array.from(content.children).forEach(child => {
+          if (!child.classList.contains("BG")) {
+            child.style.opacity = "0";
+          }
+        });
+      } else {
+        content.style.opacity = "0";
+      }
+    });
     currentSlideBackgrounds.forEach(bg => {
       bg.classList.add("blurred");
     });
