@@ -18,6 +18,16 @@
       opacity: 1;
       transition: 0.3s ease;
 
+      p {
+        span {
+          transition: 0.5s ease;
+          max-height: 0px;
+          height: auto;
+          display: block;
+          overflow: hidden;
+        }
+      }
+
       &.hidden {
         opacity: 0;
       }
@@ -91,7 +101,7 @@
           font-size: 60px;
         }
         p {
-          font-size: 30px;
+          font-size: 20px;
           max-width: 400px;
         }
       }
