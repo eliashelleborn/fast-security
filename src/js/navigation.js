@@ -2,15 +2,15 @@ import { setLang, updateContent } from "./lang";
 import fullpage from "./fullpage";
 
 export const init = () => {
-  const menuBtn = document.querySelector(".menu-btn");
-  const menuItems = document.querySelectorAll(".menu-item > a");
+  const menuBtn    = document.querySelector(".menu-btn");
+  const menuItems  = document.querySelectorAll(".menu-item > a");
   const langSelect = document.querySelector(".lang select");
-  const scrollTopBtn = document.querySelector(".s5-s0 .scrollTopBtn");
+  // const scrollTopBtn = document.querySelector(".s5-s0 .scrollTopBtn");
   const navDashesY = document.querySelectorAll(".nav-dashY");
   const navDashesX = document.querySelectorAll(".nav-dashX");
 
   // Event listeners
-  scrollTopBtn.addEventListener("click", () => scrollTop());
+  // scrollTopBtn.addEventListener("click", () => scrollTop());
 
   menuBtn.addEventListener("click", () => toggleFullpageNav());
 
@@ -58,7 +58,7 @@ export const scrollTop = () => {
 export const toggleFullpageNav = () => {
   const fullNav = document.querySelector(".full-nav");
   const menuBtn = document.querySelector(".menu-btn");
-  const main = document.querySelector("main");
+  const main    = document.querySelector("main");
 
   if (fullNav.classList.contains("open")) {
     fullNav.classList.remove("open");
