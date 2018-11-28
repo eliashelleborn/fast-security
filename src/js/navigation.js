@@ -29,7 +29,11 @@ export const init = () => {
       navDash.classList.add("clicked");
       setTimeout(() => {
         if (navDash.classList.contains("nav-dashY--prev")) {
-          fullpage.moveSectionUp();
+          if (navDash.classList.contains("to-top")) {
+            fullpage.moveTo(1);
+          } else {
+            fullpage.moveSectionUp();
+          }
         } else if (navDash.classList.contains("nav-dashY--next")) {
           fullpage.moveSectionDown();
         }
