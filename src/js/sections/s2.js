@@ -1,14 +1,14 @@
-/* import fullpage, { toggleScrolling } from "../fullpage";
-import { showSectionNav, hideSectionNav } from "../navigation";
+import fullpage from "../fullpage";
+// import { showSectionNav, hideSectionNav } from "../navigation";
 
-const theLegendContent = document.querySelector(".the-legend-content");
+/* const theLegendContent = document.querySelector(".the-legend-content");
 const closeBtn = theLegendContent.querySelector(".close-btn");
-const s2Fixed = document.querySelector(".s2-fixed");
-const readBtn = document.querySelector(".s2-fixed .read"); */
+const s2Fixed = document.querySelector(".s2-fixed"); */
 
 const init = () => {
-  /* readBtn.addEventListener("click", () => toggleContent());
-  closeBtn.addEventListener("click", () => toggleContent()); */
+  const readBtn = document.querySelector(".s2-s0 .read");
+  readBtn.addEventListener("click", () => fullpage.moveSlideRight());
+  /* closeBtn.addEventListener("click", () => toggleContent()); */
   // Scroll Spy
   /* theLegendContent.addEventListener("scroll", ev => {
     const [section1, section2, section3] = theLegendContent.querySelectorAll(

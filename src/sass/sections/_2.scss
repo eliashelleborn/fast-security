@@ -54,6 +54,54 @@
   }
 }
 
+.s2 .content .box {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  min-height: 40vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 15px 20px;
+  padding-bottom: 45px;
+
+  h1 {
+    margin-bottom: 5px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  @media screen and (orientation: landscape) and (max-height: 500px) {
+    padding-bottom: 35px;
+    padding-right: 75px;
+    padding-left: 75px;
+    h1 {
+      font-size: 25px;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+
+  @media screen and (orientation: portrait) and (max-height: 600px) {
+    padding-bottom: 35px;
+    h1 {
+      font-size: 28px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
+
+  @media screen and (min-width: 1190px) {
+    width: 40vw;
+    padding-bottom: 0;
+    right: 0;
+    left: auto;
+  }
+}
+
 .s2-s1 {
   background-image: url("https://images.unsplash.com/photo-1538871526007-01b3d1c06072?ixlib=rb-0.3.5&s=9cef9cef297f01c1b176f74261a125fe&auto=format&fit=crop&w=1567&q=80");
   background-size: cover;
