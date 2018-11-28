@@ -95,8 +95,12 @@
   }
 
   @media screen and (min-width: 1190px) {
-    width: 40vw;
-    padding-bottom: 0;
+    width: calc(50% - 50px);
+    height: calc(50% - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 50px;
     right: 0;
     left: auto;
   }
