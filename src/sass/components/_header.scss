@@ -14,7 +14,7 @@ header {
     padding-left: 50px;
   }
 
-  @media screen and (min-width: 1190px) {
+  @media screen and (min-width: 1220px) {
     left: 50%;
     margin-left: -595px;
     padding: 0;
@@ -23,6 +23,7 @@ header {
 
   img {
     margin-right: auto;
+    width: 100px;
   }
 
   .lang {
