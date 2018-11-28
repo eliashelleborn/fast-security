@@ -100,6 +100,9 @@
 
       @media screen and (max-width: 600px) {
         &.active {
+          font-size: 52px;
+        }
+        &:last-child.active {
           font-size: 26px;
         }
       }
