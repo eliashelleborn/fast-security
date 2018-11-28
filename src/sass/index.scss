@@ -109,6 +109,23 @@ body {
   max-width: 1190px;
   margin: 0 auto;
   z-index: 1;
+  transition: 0.3s ease;
+}
+
+.BG {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  object-position: center;
+  object-fit: cover;
+  transition: 0.5s ease;
+  &.blurred {
+    filter: blur(8px);
+    transform: scale(1.1);
+  }
 }
 
 .sv,

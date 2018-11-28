@@ -2,10 +2,10 @@ import { setLang, updateContent } from "./lang";
 import fullpage from "./fullpage";
 
 export const init = () => {
-  const menuBtn    = document.querySelector(".menu-btn");
-  const menuItems  = document.querySelectorAll(".menu-item > a");
+  const menuBtn = document.querySelector(".menu-btn");
+  const menuItems = document.querySelectorAll(".menu-item > a");
   const langSelect = document.querySelector(".lang select");
-  
+
   // const scrollTopBtn = document.querySelector(".s5-s0 .scrollTopBtn");
   const navDashesY = document.querySelectorAll(".nav-dashY");
   const navDashesX = document.querySelectorAll(".nav-dashX");
@@ -59,15 +59,20 @@ export const scrollTop = () => {
 export const toggleFullpageNav = () => {
   const fullNav = document.querySelector(".full-nav");
   const menuBtn = document.querySelector(".menu-btn");
-  const main    = document.querySelector("main");
-  const lang    = document.querySelector(".lang");
+  const lang = document.querySelector(".lang");
+  const currentSlide = fullpage.getActiveSlide();
+  const currentSlideBackgrounds = currentSlide.item.querySelectorAll(".BG");
+  const currentSlideContent = currentSlide.item.querySelector(".content");
+  const blurredBackgrounds = document.querySelectorAll(".BG.blurred");
 
   if (fullNav.classList.contains("open")) {
     lang.classList.remove("show");
     fullNav.classList.remove("open");
     menuBtn.classList.remove("active");
-    // main.classList.remove("blur");
-    const currentSlide = fullpage.getActiveSlide();
+    currentSlideContent.style.opacity = "1";
+    blurredBackgrounds.forEach(bg => {
+      bg.classList.remove("blurred");
+    });
     if (currentSlide.index === 0) {
       showSectionNav();
     }
@@ -75,7 +80,10 @@ export const toggleFullpageNav = () => {
     lang.classList.add("show");
     fullNav.classList.add("open");
     menuBtn.classList.add("active");
-    // main.classList.add("blur");
+    currentSlideContent.style.opacity = "0";
+    currentSlideBackgrounds.forEach(bg => {
+      bg.classList.add("blurred");
+    });
     hideSectionNav();
   }
 };
