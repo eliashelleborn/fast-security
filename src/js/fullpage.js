@@ -28,6 +28,15 @@ const fullpageInstance = new fullpage("#fullpage", {
         showSectionNav();
       }
     }
+
+    let navDashes = destination.item.querySelectorAll(".nav-dashY");
+
+    navDashes.forEach(dash => {
+      dash.classList.add("indicating");
+      setTimeout(() => {
+        dash.classList.remove("indicating");
+      }, 1500);
+    });
   },
   onSlideLeave: function(section, origin, destination, direction) {
     setActiveSlide(destination.index);

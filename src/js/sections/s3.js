@@ -1,9 +1,11 @@
 import fullpage, { toggleScrolling } from "../fullpage";
 import { showSectionNav, hideSectionNav } from "../navigation";
+import content from "../content";
 
 const drawerContent = document.querySelector(".s3-s0 .drawer");
 const drawerClose = drawerContent.querySelector(".close-btn");
 const previewContent = document.querySelector(".s3-s0 .content > div");
+
 const readBtn = document.querySelector(".s3-s0 .read");
 
 const init = () => {
@@ -13,9 +15,18 @@ const init = () => {
 
 const toggleContent = () => {
   const currentSlide = fullpage.getActiveSlide();
+  const fullText = document.querySelector(".s3-s0 .content p > span");
+  const main = document.querySelector("main");
+  const currLang = main.getAttribute("data-currentLang");
+
   if (window.innerWidth >= 1000) {
-    const fullText = document.querySelector(".s3-s0 .content p > span");
-    fullText.style.maxHeight = "200px";
+    if (fullText.classList.contains("open")) {
+      fullText.classList.remove("open");
+      readBtn.innerText = content[currLang]["s3-s0"].read;
+    } else {
+      fullText.classList.add("open");
+      readBtn.innerText = currLang === "en" ? "Less" : "Minska";
+    }
   } else {
     drawerContent.classList.toggle("open");
     previewContent.classList.toggle("hidden");

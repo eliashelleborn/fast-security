@@ -1,68 +1,11 @@
+import { imgs } from "./content";
+
 const colorBtnGroups = document.querySelectorAll(".colors");
 
 const watch = document.querySelector(".s4-s1 .product:first-child");
 const miniature = document.querySelector(".s4-s1 .product:last-child");
 const interior = document.querySelector(".s3-s1 .product:first-child");
 const exterior = document.querySelector(".s3-s1 .product:last-child");
-
-const imgs = {
-  watch: {
-    silver: {
-      webp: "/assets/img/desktop/webp/4/clock_silver.webp",
-      original: "/assets/img/desktop/png/4/clock_silver.png"
-    },
-    blue: {
-      webp: "/assets/img/desktop/webp/4/clock_blue.webp",
-      original: "/assets/img/desktop/png/4/clock_blue.png"
-    },
-    black: {
-      webp: "/assets/img/desktop/webp/4/clock_black.webp",
-      original: "/assets/img/desktop/png/4/clock_black.png"
-    }
-  },
-  miniature: {
-    silver: {
-      webp: "/assets/img/desktop/webp/4/rc_silver.webp",
-      original: "/assets/img/desktop/png/4/rc_silver.jpg"
-    },
-    blue: {
-      webp: "/assets/img/desktop/webp/4/rc_blue.webp",
-      original: "/assets/img/desktop/png/4/rc_blue.jpg"
-    },
-    black: {
-      webp: "/assets/img/desktop/webp/4/rc_black.webp",
-      original: "/assets/img/desktop/png/4/rc_black.jpg"
-    }
-  },
-  interior: {
-    silver: {
-      webp: "/assets/img/desktop/webp/3/terrafugia_interior_silver.webp",
-      original: "/assets/img/desktop/png/3/terrafugia_interior_silver.jpg"
-    },
-    blue: {
-      webp: "/assets/img/desktop/webp/3/terrafugia_interior_blue.webp",
-      original: "/assets/img/desktop/png/3/terrafugia_interior_blue.jpg"
-    },
-    black: {
-      webp: "/assets/img/desktop/webp/3/terrafugia_interior_black.webp",
-      original: "/assets/img/desktop/png/3/terrafugia_interior_black.jpg"
-    }
-  },
-  exterior: {
-    silver: {
-      webp: "/assets/img/desktop/webp/3/terrafugia_studio_silver.webp",
-      original: "/assets/img/desktop/png/3/terrafugia_studio_silver.jpg"
-    },
-    blue: {
-      webp: "/assets/img/desktop/webp/3/terrafugia_studio_blue.webp",
-      original: "/assets/img/desktop/png/3/terrafugia_studio_blue.jpg"
-    },
-    black: {
-      webp: "/assets/img/desktop/webp/3/terrafugia_studio_black.webp",
-      original: "/assets/img/desktop/png/3/terrafugia_studio_black.jpg"
-    }
-  }
-};
 
 const init = () => {
   colorBtnGroups.forEach(group => {

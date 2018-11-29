@@ -58,7 +58,7 @@ const content = {
 
     "s5-s0": {
       title: "Join the future",
-      text: "Get first the exclusive Fast Security collection book",
+      underTitle: "Get first the exclusive Fast Security collection book",
       joinBtn: "Join"
     }
   },
@@ -67,15 +67,15 @@ const content = {
       item1: "FAST SECURITY",
       item2: "HISTORIEN",
       item3: "PRODUKT",
-      item4: "ACCESSOARER",
-      item5: "GÅ MED I FRAMTIDEN"
+      item4: "TILLBEHÖR",
+      item5: "FÖLJ FRAMTIDEN"
     },
     "section-nav": {
       item1: "Fast Security",
       item2: "Historien",
       item3: "Produkt",
-      item4: "Accessoarer",
-      item5: "Gå med i framtiden"
+      item4: "Tillbehör",
+      item5: "Följ framtiden"
     },
 
     "s2-s0": {
@@ -121,8 +121,67 @@ const content = {
 
     "s5-s0": {
       title: "Gå med i framtiden",
-      text: "Få den första exklusiva Fast Security samlarbok",
+      underTitle: "Få den första exklusiva Fast Security samlarbok",
       joinBtn: "Gå med"
+    }
+  }
+};
+
+export const imgs = {
+  watch: {
+    grey: {
+      webp: "/assets/img/desktop/webp/4/4_1_watch_grey.webp",
+      original: "/assets/img/desktop/jpg/4/4_1_watch_grey.jpg"
+    },
+    blue: {
+      webp: "/assets/img/desktop/webp/4/4_1_watch_blue.webp",
+      original: "/assets/img/desktop/jpg/4/4_1_watch_blue.jpg"
+    },
+    black: {
+      webp: "/assets/img/desktop/webp/4/4_1_watch_black.webp",
+      original: "/assets/img/desktop/jpg/4/4_1_watch_black.jpg"
+    }
+  },
+  miniature: {
+    grey: {
+      webp: "/assets/img/desktop/webp/4/4_1_toy_grey.webp",
+      original: "/assets/img/desktop/jpg/4/4_1_toy_grey.jpg"
+    },
+    blue: {
+      webp: "/assets/img/desktop/webp/4/4_1_toy_blue.webp",
+      original: "/assets/img/desktop/jpg/4/4_1_toy_blue.jpg"
+    },
+    black: {
+      webp: "/assets/img/desktop/webp/4/4_1_toy_black.webp",
+      original: "/assets/img/desktop/jpg/4/4_1_toy_black.jpg"
+    }
+  },
+  interior: {
+    grey: {
+      webp: "/assets/img/desktop/webp/3/3_1_interior_grey.webp",
+      original: "/assets/img/desktop/jpg/3/3_1_interior_grey.jpg"
+    },
+    blue: {
+      webp: "/assets/img/desktop/webp/3/3_1_interior_blue.webp",
+      original: "/assets/img/desktop/jpg/3/3_1_interior_blue.jpg"
+    },
+    black: {
+      webp: "/assets/img/desktop/webp/3/3_1_interior_black.webp",
+      original: "/assets/img/desktop/jpg/3/3_1_interior_black.jpg"
+    }
+  },
+  exterior: {
+    grey: {
+      webp: "/assets/img/desktop/webp/3/3_1_exterior_grey.webp",
+      original: "/assets/img/desktop/jpg/3/3_1_exterior_grey.jpg"
+    },
+    blue: {
+      webp: "/assets/img/desktop/webp/3/3_1_exterior_blue.webp",
+      original: "/assets/img/desktop/jpg/3/3_1_exterior_blue.jpg"
+    },
+    black: {
+      webp: "/assets/img/desktop/webp/3/3_1_exterior_black.webp",
+      original: "/assets/img/desktop/jpg/3/3_1_exterior_black.jpg"
     }
   }
 };
