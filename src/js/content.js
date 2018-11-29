@@ -127,4 +127,63 @@ const content = {
   }
 };
 
+export const imgs = {
+  watch: {
+    grey: {
+      webp: "/assets/img/desktop/webp/4/4_1_watch_grey.webp",
+      original: "/assets/img/desktop/jpg/4/4_1_watch_grey.jpg"
+    },
+    blue: {
+      webp: "/assets/img/desktop/webp/4/4_1_watch_blue.webp",
+      original: "/assets/img/desktop/jpg/4/4_1_watch_blue.jpg"
+    },
+    black: {
+      webp: "/assets/img/desktop/webp/4/4_1_watch_black.webp",
+      original: "/assets/img/desktop/jpg/4/4_1_watch_black.jpg"
+    }
+  },
+  miniature: {
+    grey: {
+      webp: "/assets/img/desktop/webp/4/4_1_toy_grey.webp",
+      original: "/assets/img/desktop/jpg/4/4_1_toy_grey.jpg"
+    },
+    blue: {
+      webp: "/assets/img/desktop/webp/4/4_1_toy_blue.webp",
+      original: "/assets/img/desktop/jpg/4/4_1_toy_blue.jpg"
+    },
+    black: {
+      webp: "/assets/img/desktop/webp/4/4_1_toy_black.webp",
+      original: "/assets/img/desktop/jpg/4/4_1_toy_black.jpg"
+    }
+  },
+  interior: {
+    grey: {
+      webp: "/assets/img/desktop/webp/3/3_1_interior_grey.webp",
+      original: "/assets/img/desktop/jpg/3/3_1_interior_grey.jpg"
+    },
+    blue: {
+      webp: "/assets/img/desktop/webp/3/3_1_interior_blue.webp",
+      original: "/assets/img/desktop/jpg/3/3_1_interior_blue.jpg"
+    },
+    black: {
+      webp: "/assets/img/desktop/webp/3/3_1_interior_black.webp",
+      original: "/assets/img/desktop/jpg/3/3_1_interior_black.jpg"
+    }
+  },
+  exterior: {
+    grey: {
+      webp: "/assets/img/desktop/webp/3/3_1_exterior_grey.webp",
+      original: "/assets/img/desktop/jpg/3/3_1_exterior_grey.jpg"
+    },
+    blue: {
+      webp: "/assets/img/desktop/webp/3/3_1_exterior_blue.webp",
+      original: "/assets/img/desktop/jpg/3/3_1_exterior_blue.jpg"
+    },
+    black: {
+      webp: "/assets/img/desktop/webp/3/3_1_exterior_black.webp",
+      original: "/assets/img/desktop/jpg/3/3_1_exterior_black.jpg"
+    }
+  }
+};
+
 export default content;
