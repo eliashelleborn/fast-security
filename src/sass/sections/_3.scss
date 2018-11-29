@@ -21,6 +21,10 @@
           height: auto;
           display: block;
           overflow: hidden;
+
+          &.open {
+            max-height: 200px;
+          }
         }
       }
 
