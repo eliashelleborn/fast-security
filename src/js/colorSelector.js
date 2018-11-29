@@ -9,15 +9,15 @@ const imgs = {
   watch: {
     silver: {
       webp: "/assets/img/desktop/webp/4/clock_silver.webp",
-      original: "/assets/img/desktop/png/4/clock_silver.jpg"
+      original: "/assets/img/desktop/png/4/clock_silver.png"
     },
     blue: {
       webp: "/assets/img/desktop/webp/4/clock_blue.webp",
-      original: "/assets/img/desktop/png/4/clock_blue.jpg"
+      original: "/assets/img/desktop/png/4/clock_blue.png"
     },
     black: {
       webp: "/assets/img/desktop/webp/4/clock_black.webp",
-      original: "/assets/img/desktop/png/4/clock_black.jpg"
+      original: "/assets/img/desktop/png/4/clock_black.png"
     }
   },
   miniature: {
