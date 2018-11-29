@@ -104,6 +104,13 @@
 }
 
 .s2-s1 {
+  .BG {
+    object-position: center;
+
+    @media screen and (min-width: 1000px) {
+      object-position: right;
+    }
+  }
 }
 
 .s2-s2 {
