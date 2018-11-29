@@ -36,10 +36,9 @@ const content = {
     },
 
     "s3-s0": {
-      title: "On for the future",
-      text: "Many people still think Saab makes cars, and that is correct.",
-      fullText:
-        "We are on the go for the future. Saab is very much alive and well, as one of the world’s most innovative companies. And now we are proud to present our car for the future: FastSecurity, FS.",
+      title: "On for<br/> the future",
+      text:
+        "Many people still think Saab makes cars, and that is correct. <span class='fullText'>We are on the go for the future. Saab is very much alive and well, as one of the world’s most innovative companies. And now we are proud to present our car for the future: FastSecurity, FS.</span>",
       read: "Read"
     },
     drawer: {
@@ -100,10 +99,9 @@ const content = {
     },
 
     "s3-s0": {
-      title: "På väg mot framtiden",
-      text: "Många tror fortfarande att Saab gör bilar, och det är rätt. ",
-      fullText:
-        "Vi är på väg mot framtiden. Saab är mycket levande och även som ett av världens mest innovativa företag. Och nu är vi stolta över att presentera vår bil för framtiden: Fast Security, FS.",
+      title: "På väg<br/> mot framtiden",
+      text:
+        "Många tror fortfarande att Saab gör bilar, och det är rätt. <span className='fullText'>Vi är på väg mot framtiden. Saab är mycket levande och även som ett av världens mest innovativa företag. Och nu är vi stolta över att presentera vår bil för framtiden: Fast Security, FS.</span>",
       read: "Läs mer"
     },
     drawer: {
