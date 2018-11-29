@@ -1,3 +1,5 @@
+import content from "./content";
+
 export const init = () => {
   document.addEventListener("DOMContentLoaded", () => {
     updateContent();
@@ -45,29 +47,14 @@ export const updateContent = () => {
           if (section.hasOwnProperty(key)) {
             const value = section[key];
             const el = document.querySelector(`.${sectionKey} .${key}`);
-            if (value !== el.innerHTML) {
-              el.innerHTML = value;
+            if (el) {
+              if (value !== el.innerHTML) {
+                el.innerHTML = value;
+              }
             }
           }
         }
       }
-    }
-  }
-};
-
-const content = {
-  en: {
-    "s5-s0": {
-      title: "Join the future",
-      underTitle: "Get the broshure",
-      joinBtn: "Join"
-    }
-  },
-  sv: {
-    "s5-s0": {
-      title: "Gå med i framtiden",
-      underTitle: "Få tag i broschyren",
-      joinBtn: "Gå med"
     }
   }
 };

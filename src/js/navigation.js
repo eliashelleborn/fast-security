@@ -65,11 +65,11 @@ export const toggleFullpageNav = () => {
   const menuBtn = document.querySelector(".menu-btn");
   const lang = document.querySelector(".lang");
   const currentSlide = fullpage.getActiveSlide();
-  const currentSlideBackgrounds = currentSlide.item.querySelectorAll(".BG");
+  // const currentSlideBackgrounds = currentSlide.item.querySelectorAll(".BG");
   const currentSlideContent = currentSlide.item.querySelectorAll(
     ".content, .product"
   );
-  const blurredBackgrounds = document.querySelectorAll(".BG.blurred");
+  // const blurredBackgrounds = document.querySelectorAll(".BG.blurred");
 
   if (fullNav.classList.contains("open")) {
     lang.classList.remove("show");
@@ -86,9 +86,9 @@ export const toggleFullpageNav = () => {
         content.style.opacity = "1";
       }
     });
-    blurredBackgrounds.forEach(bg => {
+    /* blurredBackgrounds.forEach(bg => {
       bg.classList.remove("blurred");
-    });
+    }); */
     if (currentSlide.index === 0) {
       showSectionNav();
     }
@@ -107,9 +107,9 @@ export const toggleFullpageNav = () => {
         content.style.opacity = "0";
       }
     });
-    currentSlideBackgrounds.forEach(bg => {
+    /* currentSlideBackgrounds.forEach(bg => {
       bg.classList.add("blurred");
-    });
+    }); */
     hideSectionNav();
   }
 };
