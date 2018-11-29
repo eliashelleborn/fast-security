@@ -33,9 +33,10 @@ const submitForm = () => {
 
     setTimeout(() => {
       overlay.classList.remove('hidden');
+      overlay.style.backgroundColor = 'rgba(34, 34, 34, 0.804)';
+      overlay.style.transition = ".3s";
+      container.style.maxWidth = 'initial';
       content.style.display = "none";
-      container.style.backgroundColor = 'rgba(34, 34, 34, 0.804)';
-      container.style.transition = ".3s";
       header.style.display = 'none';
       hideSectionNav();
 
@@ -46,6 +47,11 @@ const submitForm = () => {
     }, 900);
   }else{
     console.log('Enter a valid email address')
+    emailInput.classList.add('error');
+
+    setTimeout( () => {
+      emailInput.classList.remove('error');
+    }, 820);
   }
 }
 

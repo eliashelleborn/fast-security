@@ -4,6 +4,9 @@
   background-repeat  : no-repeat;
 
   .overlay{
+    padding: 16px;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,6 +14,12 @@
     text-align: center;
     color: #eee;
     
+    backgroundColor: rgba(34, 34, 34, 0.804);
+    transition: .3s;
+
+    @media screen and (max-width: 600px) {
+      margin-left: -10px;
+    }
 
     img{
       max-width: 75%;
@@ -44,6 +53,10 @@
       flex-direction: column;
 
       margin-top: 32px;
+
+      input.error{
+        animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+      }
 
       input, .joinBtn{
         border          : .5px solid rgb(255, 255, 255);
@@ -104,8 +117,6 @@
       display        : flex;
       flex-direction : row;
       justify-content: space-around;
-
-      font-size: 18px;  // Remove me
     }
 
     .brand {
@@ -129,5 +140,23 @@
       font-size  : 14px;
       white-space: nowrap;
     }
+  }
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: translate3d(-1px, 0, 0);
+  }
+  
+  20%, 80% {
+    transform: translate3d(2px, 0, 0);
+  }
+
+  30%, 50%, 70% {
+    transform: translate3d(-4px, 0, 0);
+  }
+
+  40%, 60% {
+    transform: translate3d(4px, 0, 0);
   }
 }
