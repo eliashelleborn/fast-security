@@ -67,15 +67,15 @@ const content = {
       item1: "FAST SECURITY",
       item2: "HISTORIEN",
       item3: "PRODUKT",
-      item4: "ACCESSOARER",
-      item5: "GÅ MED I FRAMTIDEN"
+      item4: "TILLBEHÖR",
+      item5: "FÖLJ FRAMTIDEN"
     },
     "section-nav": {
       item1: "Fast Security",
       item2: "Historien",
       item3: "Produkt",
-      item4: "Accessoarer",
-      item5: "Gå med i framtiden"
+      item4: "Tillbehör",
+      item5: "Följ framtiden"
     },
 
     "s2-s0": {

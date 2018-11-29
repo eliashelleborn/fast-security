@@ -70,13 +70,14 @@
 .full-nav.open {
   height: 100%;
   pointer-events: all;
+  overflow-y: hidden;
 
   ul {
     // Translate into initial position
     transform: translate(0px, 0px);
 
     li {
-      font-size: 48px;
+      font-size: 35px;
       color: #eee;
       @media screen and (max-height: 450px) {
         font-size: 30px;
@@ -92,4 +93,5 @@
   align-items: center;
   text-align: center;
   margin-top: 30px;
+  overflow-y: hidden;
 }
