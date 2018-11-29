@@ -122,10 +122,10 @@ body {
   object-position: center;
   object-fit: cover;
   transition: 0.5s ease;
-  &.blurred {
+  /* &.blurred {
     filter: blur(8px);
     transform: scale(1.1);
-  }
+  } */
 }
 
 .sv,
