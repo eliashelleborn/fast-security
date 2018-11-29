@@ -58,7 +58,7 @@ const content = {
 
     "s5-s0": {
       title: "Join the future",
-      text: "Get first the exclusive Fast Security collection book",
+      underTitle: "Get first the exclusive Fast Security collection book",
       joinBtn: "Join"
     }
   },
@@ -121,7 +121,7 @@ const content = {
 
     "s5-s0": {
       title: "Gå med i framtiden",
-      text: "Få den första exklusiva Fast Security samlarbok",
+      underTitle: "Få den första exklusiva Fast Security samlarbok",
       joinBtn: "Gå med"
     }
   }
