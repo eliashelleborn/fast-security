@@ -5,6 +5,7 @@ import initS5 from "./s5";
 const initSections = () => {
   initS2();
   initS3();
+  initS5();
 };
 
 export default initSections;

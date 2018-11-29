@@ -16,28 +16,10 @@
 @import "components/navdash";
 @import "components/product";
 
-// main{
-//   transition: filter 0s .4s;
-// }
-
-// main.blur{
-//   filter: blur(8px);
-//   transition: filter 0s .2s;
-// }
-
-// Used to center sidenav
-/* .middle {
-  position: fixed;
-  top: 50%;
-  height: 1px;
-  width: 100%;
-  background: red;
-  z-index: 9;
-} */
 
 button:focus,
 select:focus {
-  outline: 0;
+  outline                    : 0;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   -webkit-tap-highlight-color: transparent;
 }
@@ -45,25 +27,25 @@ select:focus {
 /* Weird fix for mobile chrome transitions */
 body {
   -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+  -moz-transform   : translate3d(0, 0, 0);
+  -ms-transform    : translate3d(0, 0, 0);
+  -o-transform     : translate3d(0, 0, 0);
+  transform        : translate3d(0, 0, 0);
 
   -webkit-transform: translateZ(0);
-  -moz-transform: translateZ(0);
-  -ms-transform: translateZ(0);
-  -o-transform: translateZ(0);
-  transform: translateZ(0);
+  -moz-transform   : translateZ(0);
+  -ms-transform    : translateZ(0);
+  -o-transform     : translateZ(0);
+  transform        : translateZ(0);
 
-  -webkit-perspective: 1000;
-  -moz-perspective: 1000;
-  -ms-perspective: 1000;
-  perspective: 1000;
+  -webkit-perspective        : 1000;
+  -moz-perspective           : 1000;
+  -ms-perspective            : 1000;
+  perspective                : 1000;
   -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  backface-visibility: hidden;
+  -moz-backface-visibility   : hidden;
+  -ms-backface-visibility    : hidden;
+  backface-visibility        : hidden;
 }
 
 .slide {
@@ -71,26 +53,26 @@ body {
 }
 
 .fixed-container {
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  max-width: 1190px;
-  z-index: 100;
+  left          : 0;
+  top           : 0;
+  width         : 100%;
+  height        : 100%;
+  position      : fixed;
+  max-width     : 1190px;
+  z-index       : 100;
   pointer-events: none;
 
   @media screen and (min-width: 1190px) {
     margin-left: -595px;
-    left: 50%;
+    left       : 50%;
   }
 }
 
 .container {
-  height: 100%;
+  height   : 100%;
   max-width: 1190px;
-  margin: 0 auto;
-  padding: 0 10px;
+  margin   : 0 auto;
+  padding  : 0 10px;
 
   @media screen and (min-width: 600px) {
     padding: 0;
@@ -98,32 +80,32 @@ body {
 }
 
 .container-fluid {
-  width: 100%;
+  width : 100%;
   height: 100%;
 }
 
 .content {
-  display: flex;
-  height: 100%;
-  color: white;
-  max-width: 1190px;
-  margin: 0 auto;
-  z-index: 1;
+  display   : flex;
+  height    : 100%;
+  color     : white;
+  max-width : 1190px;
+  margin    : 0 auto;
+  z-index   : 1;
   transition: 0.3s ease;
 }
 
 .BG {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
+  width          : 100%;
+  height         : 100%;
+  position       : absolute;
+  z-index        : -1;
+  top            : 0;
+  left           : 0;
   object-position: center;
-  object-fit: cover;
-  transition: 0.5s ease;
+  object-fit     : cover;
+  transition     : 0.5s ease;
   &.blurred {
-    filter: blur(8px);
+    filter   : blur(8px);
     transform: scale(1.1);
   }
 }
@@ -137,35 +119,35 @@ body {
 }
 
 button.read {
-  background: none;
-  border: none;
-  color: #fff;
-  font-size: 20px;
+  background : none;
+  border     : none;
+  color      : #fff;
+  font-size  : 20px;
   font-weight: 500;
-  position: relative;
-  opacity: 1;
-  transition: 0.3s ease;
-  padding: 10px 20px;
-  cursor: pointer;
+  position   : relative;
+  opacity    : 1;
+  transition : 0.3s ease;
+  padding    : 10px 20px;
+  cursor     : pointer;
 
   &:before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: 20px;
-    width: 15px;
-    height: 1px;
+    content         : "";
+    position        : absolute;
+    left            : 0;
+    top             : 20px;
+    width           : 15px;
+    height          : 1px;
     background-color: #fff;
-    transition: 0.3s ease;
+    transition      : 0.3s ease;
   }
 
   &:hover {
     color: rgba(255, 255, 255, 0.5);
     &:before {
       z-index: 10;
-      left: 18px;
-      width: 50px;
-      height: 1px;
+      left   : 18px;
+      width  : 50px;
+      height : 1px;
     }
   }
 }
