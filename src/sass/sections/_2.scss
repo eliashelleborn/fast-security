@@ -32,6 +32,7 @@
       padding-left: 50%;
       justify-content: flex-start;
       & > div {
+        padding-left: 50px;
         align-items: flex-start;
       }
       br {
@@ -55,8 +56,8 @@
   left: 0;
   width: 100%;
   min-height: 40vh;
-  background-color: rgba(0, 0, 0, 0.7);
-  padding: 15px 20px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 25px 30px;
   padding-bottom: 45px;
 
   h1 {
@@ -103,6 +104,13 @@
 }
 
 .s2-s1 {
+  .BG {
+    object-position: center;
+
+    @media screen and (min-width: 1000px) {
+      object-position: right;
+    }
+  }
 }
 
 .s2-s2 {

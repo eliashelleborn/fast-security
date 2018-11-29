@@ -1,14 +1,14 @@
 .s1-s0 {
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  .BG {
+    object-position: 75%;
+  }
 
   .content {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-    padding-bottom: 100px;
+    padding-bottom: 65px;
 
     & > div {
       display: flex;
@@ -41,7 +41,7 @@
         }
       }
       p {
-        margin-top: 30px;
+        margin-top: 15px;
       }
     }
   }
