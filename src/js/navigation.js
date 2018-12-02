@@ -5,13 +5,14 @@ export const init = () => {
   const menuBtn = document.querySelector(".menu-btn");
   const menuItems = document.querySelectorAll(".menu-item > a");
   const langSelect = document.querySelector(".lang select");
+  const sideNavBtns = document.querySelectorAll(".section-nav a");
+  const fullNavBtns = document.querySelectorAll(".full-nav a");
 
-  // const scrollTopBtn = document.querySelector(".s5-s0 .scrollTopBtn");
+
   const navDashesY = document.querySelectorAll(".nav-dashY");
   const navDashesX = document.querySelectorAll(".nav-dashX");
 
   // Event listeners
-  // scrollTopBtn.addEventListener("click", () => scrollTop());
 
   menuBtn.addEventListener("click", () => toggleFullpageNav());
 
@@ -23,6 +24,20 @@ export const init = () => {
     setLang(e.target.value);
     updateContent();
   });
+
+  // SideNavBtn listeners
+  sideNavBtns[0].addEventListener("click", () => { fullpage_api.moveTo(1) })
+  sideNavBtns[1].addEventListener("click", () => { fullpage_api.moveTo(2) })
+  sideNavBtns[2].addEventListener("click", () => { fullpage_api.moveTo(3) })
+  sideNavBtns[3].addEventListener("click", () => { fullpage_api.moveTo(4) })
+  sideNavBtns[4].addEventListener("click", () => { fullpage_api.moveTo(5) })
+
+  // FullNavBtn listeners
+  fullNavBtns[0].addEventListener("click", () => { fullpage_api.moveTo(1) })
+  fullNavBtns[1].addEventListener("click", () => { fullpage_api.moveTo(2) })
+  fullNavBtns[2].addEventListener("click", () => { fullpage_api.moveTo(3) })
+  fullNavBtns[3].addEventListener("click", () => { fullpage_api.moveTo(4) })
+  fullNavBtns[4].addEventListener("click", () => { fullpage_api.moveTo(5) })
 
   navDashesY.forEach(navDash => {
     navDash.addEventListener("click", () => {
